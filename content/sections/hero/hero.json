@@ -1,0 +1,17 @@
+{
+  "intro": "Hello",
+  "heroPhoto": {
+    "src": "../../images/favicon.png",
+    "alt": "My Photo"
+  },
+  "image": {
+    "src": "../../images/favicon.png",
+    "alt": "Waving Hand Emoji"
+  },
+  "title": "Antalpha Labs is a web3 developer community",
+  "subtitle": {
+    "prefix": "Let's learn, communicate and build ",
+    "highlight": "together",
+    "suffix": "."
+  }
+}

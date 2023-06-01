@@ -1,0 +1,1101 @@
+@font-face {
+  font-family: MontserratLight;
+  src: url(/fonts/Montserrat-Light-6.otf);
+}
+
+@font-face {
+  font-family: Montserratregular;
+  src: url(/fonts/Montserrat-Regular-8.otf);
+}
+
+@font-face {
+  font-family: Inter-Medium;
+  src: url(/fonts/Inter-Medium-8.otf);
+}
+
+@font-face {
+  font-family: Inter-Black;
+  src: url(/fonts/Inter-Black-3.otf);
+}
+
+.chiangmai {
+  margin-top: 3.5rem;
+  width: 100vw;
+  height: 38rem;
+  background-color: #fcf0ec;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/ChiangMai.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.chiangmai_activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 94%;
+}
+
+.chiangmai_activity_pic {
+  width: 100%;
+}
+
+/* .chiangmai_bgleft img{
+  width: 30.6875rem;
+  height: 38rem;
+}
+.chiangmai_bgright img{
+  width: 30.6875rem;
+  height: 38rem;
+} */
+
+.chiangmai_theme {
+  box-sizing: border-box;
+  width: 348.54px;
+  height: 56.45px;
+  left: 522.39px;
+  top: 288.02px;
+  background: #73be30;
+  border: 2px solid #00290c;
+  border-radius: 35px;
+  font-family: "Gliker-Bold";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  border: 1.88677px solid #00290c;
+}
+
+.chiangmai_title {
+  width: 444px;
+  height: 72px;
+  left: 486.27px;
+  top: 234.75px;
+  font-family: "Vantage Point Neo";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60.3766px;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #e6467f;
+  border: 7px solid #ffffff;
+  transform: matrix(1, 0, -0.29, 0.96, 0, 0);
+}
+
+.chiangmai_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13.1478px 35.0609px;
+  gap: 8.77px;
+  cursor: pointer;
+  width: 220px;
+  height: 50.3px;
+  border: 1.75304px solid #73be30;
+  border-radius: 1.8px;
+  background-color: #fcf0ec;
+  font-family: "MontserratLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #387600;
+}
+
+.chiangmai_button:hover {
+  background-color: #ffef6b;
+  -webkit-box-shadow: 10px 10px 99px 6px rgba(229, 240, 76, 0.931);
+  -moz-box-shadow: 10px 10px 99px 6px rgba(229, 240, 76, 0.931);
+  box-shadow: 10px 10px 80px 6px rgba(229, 240, 76, 0.931);
+}
+
+.chiangmai_time {
+  font-family: "MontserratLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #387600;
+}
+
+.chiangmai_add {
+  font-family: "MontserratLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height */
+  color: #73be30;
+}
+
+.chiangmai_email {
+  font-family: " Montserratregular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #7d9f55;
+}
+
+.chiangmai_timelink {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 60px;
+  align-items: center;
+}
+
+.chiangmai_contact {
+  display: flex;
+  gap: 10px;
+}
+
+/*
+.support_box {
+  margin-top: 2.875rem;
+  width: 44.25rem;
+  height: 16.75rem;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/support.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+} */
+
+.participate {
+  width: 100%;
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.participate_wrap {
+  width: 37.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.participate_title {
+  margin: 0 auto;
+  width: 36.25rem;
+  height: 5rem;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/participant.jpg");
+  /* background-size: 100% 100%; */
+  background-size: contain;
+  background-repeat: space;
+  margin-bottom: 3rem;
+}
+
+.participate_content h2 {
+  font-family: "Inter-Medium";
+  font-weight: 700;
+  font-size: 29px;
+  margin-bottom: 1.875rem;
+}
+
+.participate_content a {
+  color: #6ab725;
+  text-decoration-line: underline;
+}
+
+.participate_content span {
+  color: #6ab725;
+  text-decoration-line: underline;
+  font-size: 16px;
+  line-height: 150.02%;
+  font-weight: 600;
+  font-family: "Inter-Regular";
+}
+
+.contentbox1 {
+  margin-bottom: 3.65rem;
+}
+
+.contentbox2 {
+  margin-bottom: 3.65rem;
+}
+.contentbox1 ol {
+  padding-left: -0.1rem;
+}
+.contentbox2 ol {
+  padding-left: -0.1rem;
+}
+.contentbox3 ul {
+  padding-left: -0.1rem;
+}
+
+.chiangmai_support {
+  width: 45rem;
+  margin: 7rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.cohost,
+.techsupport,
+.talentsupport,
+.communitysupport,
+.media,
+.hackerid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentsupport {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.titleimg1 {
+  width: 20.875rem;
+  height: 5rem;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/support/cohost.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.titleimg2 {
+  width: 36.125rem;
+  height: 5rem;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/support/techsupport.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.titleimg3 {
+  width: 36.125rem;
+  height: 5rem;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/support/talentsupport.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.titleimg4 {
+  width: 39.875rem;
+  height: 5rem;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/support/communitysupport.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.titleimg5 {
+  width: 16.875rem;
+  height: 5rem;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/support/media.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.titleimg6 {
+  width: 20.875rem;
+  height: 5rem;
+  background-image: url("../../../content/images/hackerhouse/chiangmai/support/hackerid.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg1 {
+  width: 20.9375rem;
+  height: 7.375rem;
+  background: #5c5cf7;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg2 {
+  width: 14rem;
+  height: 4.875rem;
+  background: #5c5cf7;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 手机端 */
+
+@media only screen and (max-width: 249px) {
+  .chiangmai {
+    margin-top: 0rem;
+    height: 32.5rem;
+    background-image: url("../../../content/images/hackerhouse/chiangmai/chiangmai_mobile.jpg");
+  }
+
+  .participate_wrap {
+    padding: 10px;
+  }
+
+  .chiangmai_contact {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chiangmai_activity {
+    width: 100vw;
+    height: 78%;
+  }
+  .chiangmai_support {
+    margin: 0rem auto;
+  }
+
+  .participate {
+    margin-top: 5rem;
+  }
+
+  .participate_title {
+    width: 13.25rem;
+    height: 3rem;
+    margin: 0;
+  }
+  .participate_content h2 {
+    font-size: 1.25rem;
+  }
+
+  .chiangmai_button {
+    width: 8.5rem;
+    font-size: 0.625rem;
+  }
+
+  .chiangmai_add {
+    font-size: 12px;
+  }
+
+  .chiangmai_timelink {
+    gap: 0.5rem;
+    margin-top: 3.125rem;
+  }
+  .chiangmai_time {
+    font-size: 14px;
+  }
+
+  .support_box {
+    height: 9.75rem;
+  }
+  .chiangmai_support {
+    margin: 2rem auto;
+    width: 13rem;
+    gap: 3rem;
+  }
+
+  .bg1 {
+    width: 10rem;
+    height: 3rem;
+    padding: 0.5rem;
+  }
+
+  .bg1 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg2 {
+    width: 8rem;
+    height: 3rem;
+    padding: 0.5rem;
+  }
+  .bg2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .titleimg1 {
+    width: 10rem;
+  }
+  .titleimg2 {
+    width: 15rem;
+  }
+  .titleimg3 {
+    width: 15rem;
+  }
+  .titleimg4 {
+    width: 15rem;
+  }
+  .titleimg5 {
+    width: 10rem;
+  }
+  .titleimg6 {
+    width: 10rem;
+  }
+  .contentsupport {
+    margin-top: 0.1rem;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 299px) {
+  .chiangmai {
+    margin-top: 0rem;
+    height: 38rem;
+    background-image: url("../../../content/images/hackerhouse/chiangmai/chiangmai_mobile.jpg");
+  }
+
+  .participate_wrap {
+    padding: 10px;
+  }
+
+  .chiangmai_timelink {
+    gap: 0.375rem;
+  }
+
+  .chiangmai_contact {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chiangmai_activity {
+    width: 100vw;
+    height: 83%;
+  }
+  .chiangmai_support {
+    margin: 0rem auto;
+  }
+  .chiangmai_time {
+    font-size: 14px;
+  }
+  .participate {
+    margin-top: 5rem;
+  }
+
+  .participate_title {
+    width: 14.25rem;
+    height: 3rem;
+    margin: 0;
+  }
+
+  .participate_content h2 {
+    font-size: 1.25rem;
+  }
+
+  .chiangmai_button {
+    width: 8.5rem;
+    font-size: 0.525rem;
+  }
+
+  .chiangmai_add {
+    font-size: 12px;
+  }
+
+  .support_box {
+    height: 10.75rem;
+  }
+
+  .chiangmai_support {
+    margin: 2rem auto;
+    width: 13rem;
+    gap: 3rem;
+  }
+
+  .bg1 {
+    width: 10rem;
+    height: 3rem;
+    padding: 0.5rem;
+  }
+
+  .bg1 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg2 {
+    width: 8rem;
+    height: 3rem;
+    padding: 0.5rem;
+  }
+  .bg2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .titleimg1 {
+    width: 10rem;
+  }
+  .titleimg2 {
+    width: 15rem;
+  }
+  .titleimg3 {
+    width: 15rem;
+  }
+  .titleimg4 {
+    width: 15rem;
+  }
+  .titleimg5 {
+    width: 10rem;
+  }
+  .titleimg6 {
+    width: 10rem;
+  }
+  .contentsupport {
+    margin-top: 0.1rem;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 329px) {
+  .chiangmai {
+    margin-top: 0rem;
+    height: 43rem;
+    background-image: url("../../../content/images/hackerhouse/chiangmai/chiangmai_mobile.jpg");
+  }
+
+  .participate_wrap {
+    padding: 10px;
+  }
+
+  .chiangmai_contact {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chiangmai_activity {
+    width: 100vw;
+    height: 78%;
+  }
+  .chiangmai_support {
+    margin: 0rem auto;
+  }
+
+  .participate {
+    margin-top: 5rem;
+  }
+
+  .chiangmai_time {
+    font-size: 16px;
+  }
+
+  .chiangmai_button {
+    width: 10rem;
+    font-size: 0.725rem;
+  }
+
+  .chiangmai_add {
+    font-size: 12px;
+  }
+
+  .participate_title {
+    width: 18rem;
+    height: 3rem;
+    margin: 0;
+  }
+
+  .participate_content h2 {
+    font-size: 1.4rem;
+  }
+
+  .support_box {
+    height: 13.75rem;
+  }
+
+  .chiangmai_support {
+    margin: 2rem auto;
+    width: 13rem;
+    gap: 3rem;
+  }
+
+  .bg1 {
+    width: 12rem;
+    height: 5rem;
+    padding: 0.8rem;
+  }
+
+  .bg1 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg2 {
+    width: 10rem;
+    height: 3.75rem;
+    padding: 0.8rem;
+  }
+  .bg2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .titleimg1 {
+    width: 10rem;
+  }
+  .titleimg2 {
+    width: 16rem;
+  }
+  .titleimg3 {
+    width: 16rem;
+  }
+  .titleimg4 {
+    width: 16rem;
+  }
+  .titleimg5 {
+    width: 10rem;
+  }
+  .titleimg6 {
+    width: 10rem;
+  }
+  .contentsupport {
+    margin-top: 0.1rem;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 360px) {
+  .chiangmai {
+    margin-top: 0rem;
+    height: 48rem;
+    background-image: url("../../../content/images/hackerhouse/chiangmai/chiangmai_mobile.jpg");
+  }
+
+  .participate_wrap {
+    padding: 10px;
+  }
+
+  .chiangmai_contact {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chiangmai_activity {
+    width: 100vw;
+    height: 78%;
+  }
+  .chiangmai_support {
+    margin: 0rem auto;
+  }
+
+  .participate {
+    margin-top: 5rem;
+  }
+
+  .participate_title {
+    width: 19.25rem;
+    height: 3rem;
+    margin: 0;
+  }
+
+  .support_box {
+    height: 15.75rem;
+  }
+  .chiangmai_support {
+    margin: 2rem auto;
+    width: 20rem;
+  }
+
+  .bg1 {
+    width: 19rem;
+    height: 6rem;
+  }
+
+  .bg2 {
+    width: 13rem;
+    height: 5rem;
+  }
+
+  .titleimg1 {
+    width: 13rem;
+  }
+  .titleimg2 {
+    width: 22rem;
+  }
+  .titleimg3 {
+    width: 22rem;
+  }
+  .titleimg4 {
+    width: 22rem;
+  }
+  .titleimg5 {
+    width: 13rem;
+  }
+  .titleimg6 {
+    width: 13rem;
+  }
+  .contentsupport {
+    margin-top: 0.85rem;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 399px) {
+  .chiangmai {
+    margin-top: 0rem;
+    height: 51rem;
+    background-image: url("../../../content/images/hackerhouse/chiangmai/chiangmai_mobile.jpg");
+  }
+
+  .participate_wrap {
+    padding: 10px;
+  }
+
+  .chiangmai_contact {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chiangmai_activity {
+    width: 100vw;
+    height: 78%;
+  }
+  .chiangmai_support {
+    margin: 0rem auto;
+  }
+
+  .participate {
+    margin-top: 5rem;
+  }
+
+  .participate_title {
+    width: 20.25rem;
+    height: 3rem;
+    margin: 0;
+  }
+  .chiangmai_support {
+    width: 25rem;
+  }
+  .chiangmai_support {
+    margin: 2rem auto;
+    width: 20rem;
+  }
+
+  .bg1 {
+    width: 19rem;
+    height: 6rem;
+  }
+
+  .bg2 {
+    width: 13rem;
+    height: 5rem;
+  }
+
+  .titleimg1 {
+    width: 13rem;
+  }
+  .titleimg2 {
+    width: 22rem;
+  }
+  .titleimg3 {
+    width: 22rem;
+  }
+  .titleimg4 {
+    width: 22rem;
+  }
+  .titleimg5 {
+    width: 13rem;
+  }
+  .titleimg6 {
+    width: 13rem;
+  }
+  .contentsupport {
+    margin-top: 0.85rem;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 539px) {
+  .chiangmai {
+    margin-top: 0rem;
+    background-image: url("../../../content/images/hackerhouse/chiangmai/chiangmai_mobile.jpg");
+    height: 55rem;
+  }
+
+  .participate_wrap {
+    padding: 10px;
+  }
+
+  .chiangmai_contact {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chiangmai_activity {
+    width: 100vw;
+    height: 78%;
+  }
+
+  .participate {
+    margin-top: 5rem;
+  }
+
+  .participate_title {
+    width: 20.25rem;
+    height: 3rem;
+    margin: 0;
+  }
+
+  .chiangmai_support {
+    margin: 2rem auto;
+    width: 25rem;
+  }
+
+  .bg1 {
+    width: 19.9rem;
+    height: 6.3rem;
+  }
+
+  .bg2 {
+    width: 12rem;
+    height: 4rem;
+  }
+
+  .titleimg1 {
+    width: 15rem;
+  }
+  .titleimg2 {
+    width: 25.8rem;
+  }
+  .titleimg3 {
+    width: 25.8rem;
+  }
+  .titleimg4 {
+    width: 25.8rem;
+  }
+  .titleimg5 {
+    width: 15rem;
+  }
+  .titleimg6 {
+    width: 15rem;
+  }
+  .contentsupport {
+    margin-top: 1rem;
+  }
+}
+
+/* ipad */
+
+@media (min-width: 540px) and (max-width: 599px) {
+  .chiangmai {
+    height: 19rem;
+    margin-top: 0;
+  }
+  .chiangmai_timelink {
+    font-size: 16px;
+  }
+  .chiangmai_activity {
+    height: 100%;
+  }
+  .participate_title {
+    width: 28.25rem;
+  }
+  .chiangmai_support {
+    margin: 3rem auto;
+  }
+  .chiangmai_timelink {
+    gap: 0.5rem;
+    margin-top: 3.125rem;
+  }
+  .chiangmai_time {
+    font-size: 14px;
+  }
+  .chiangmai_button {
+    width: 12.5rem;
+    font-size: 1.125rem;
+  }
+  .chiangmai_add {
+    font-size: 12px;
+  }
+  .chiangmai_support {
+    width: 25rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 760px) {
+  .chiangmai {
+    height: 16rem;
+    margin-top: 0;
+  }
+  .chiangmai_timelink {
+    font-size: 16px;
+  }
+  .chiangmai_activity {
+    height: 100%;
+  }
+  .participate_title {
+    width: 28.25rem;
+  }
+  .chiangmai_support {
+    margin: 3rem auto;
+  }
+  .chiangmai_timelink {
+    gap: 0.5rem;
+    margin-top: 3.125rem;
+  }
+  .chiangmai_time {
+    font-size: 14px;
+  }
+  .chiangmai_button {
+    width: 11.5rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+  .chiangmai_add {
+    font-size: 12px;
+  }
+  .chiangmai_support {
+    width: 33rem;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 770px) {
+  .chiangmai {
+    height: 21rem;
+    margin-top: 0;
+  }
+  .chiangmai_timelink {
+    font-size: 16px;
+  }
+  .chiangmai_activity {
+    height: 95%;
+  }
+  .participate_title {
+    width: 28.25rem;
+  }
+  .chiangmai_support {
+    margin: 3rem auto;
+  }
+  .chiangmai_timelink {
+    gap: 0.5rem;
+    margin-top: 3.125rem;
+  }
+  .chiangmai_time {
+    font-size: 14px;
+  }
+  .chiangmai_button {
+    width: 11.5rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+  .chiangmai_add {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 771px) and (max-width: 1024px) {
+  .chiangmai {
+    height: 28rem;
+    margin-top: 0;
+  }
+  .chiangmai_timelink {
+    font-size: 16px;
+  }
+  .chiangmai_activity {
+    height: 96%;
+  }
+  .participate_title {
+    width: 28.25rem;
+  }
+  .chiangmai_support {
+    margin: 3rem auto;
+  }
+  .chiangmai_timelink {
+    gap: 0.5rem;
+    margin-top: 3.125rem;
+  }
+  .chiangmai_time {
+    font-size: 16px;
+  }
+  .chiangmai_add {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1330px) {
+  .chiangmai {
+    height: 35rem;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1600px) {
+  .chiangmai {
+    height: 38rem;
+    margin-top: 0;
+  }
+  .chiangmai_activity {
+    height: 98%;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1700px) {
+  .chiangmai {
+    height: 41.5rem;
+    margin-top: 0;
+  }
+  .chiangmai_activity {
+    height: 90%;
+  }
+}
+
+@media (min-width: 1701px) and (max-width: 2000px) {
+  .chiangmai {
+    height: 52rem;
+    margin-top: 0;
+  }
+  .chiangmai_activity {
+    height: 90%;
+  }
+}
+
+@media (min-width: 2400px) and (max-width: 2600px) {
+  .chiangmai {
+    height: 69rem;
+    margin-top: 0;
+  }
+  .chiangmai_activity {
+    height: 87%;
+  }
+  .chiangmai_time {
+    font-size: 3.125rem;
+  }
+  .chiangmai_button {
+    width: 24.5rem;
+    height: 6.5rem;
+    font-size: 2.2rem;
+  }
+  .chiangmai_add {
+    font-size: 2.1875rem;
+  }
+
+  .chiangmai_email {
+    font-size: 2.1875rem;
+  }
+
+  .participate_title {
+    height: 9rem;
+    margin: 0 auto;
+  }
+  .participate_content h2 {
+    font-size: 2.5rem;
+  }
+
+  .participate_wrap {
+    width: 55.5rem;
+  }
+}

@@ -1,0 +1,1043 @@
+@font-face {
+  font-family: mobileMontserrat;
+  src: url(/fonts/Montserrat-Regular-8.otf);
+}
+@font-face {
+  font-family: SInter;
+  src: url(/fonts/Inter-Light-7.otf);
+}
+
+@font-face {
+  font-family: SSInter;
+  src: url(/fonts/Inter-Medium-8.otf);
+}
+
+@font-face {
+  font-family: Thunder;
+  src: url(/fonts/Thunder-BoldLC.ttf);
+}
+
+/* PC端 */
+
+.seoul {
+  background-color: black;
+  padding: 0 8.5rem;
+  color: white;
+}
+
+.seoul2 {
+  padding: 0 8.5rem;
+  background-color: black;
+
+}
+
+.seoul-web {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  height: 6.5rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.seoul-logo {
+  width: 18.125rem;
+  height: 2.5rem;
+  background-image: url('../../../content/images/hackerhouse/seoul/pclogo.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.seoul-navi-links {
+  display: flex;
+  gap: 4.75rem;
+  font-family: 'Montserrat5';
+  font-size: 24px;
+  list-style: none;
+  justify-content: center;
+  color: white;
+}
+
+.seoul-navi-links__item1{
+  display: flex;
+  position: relative;
+}
+
+.seoul-navi-links__item1::before {
+  left: 0.975rem;
+  padding-right: 0.5rem;
+  content: '<';
+  font-size: 25px;
+  color: #435aff;
+}
+.seoul-navi-links__item1::after{
+
+  padding:0 0.5rem;
+  content: '>';
+  font-size: 28px;
+  color: #435aff;
+}
+
+.seoul-navi-links__item2{
+  position: relative;
+}
+
+.seoul-line {
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  background-color: #2222ff;
+  bottom: 0;
+  transition: width ease 0.3s;
+}
+
+.seoul-navi-links__item1:hover .seoul-line {
+  width: 100%;
+}
+
+.seoul-navi-links__item2:hover .seoul-line {
+  width: 100%;
+}
+
+.seoul-video-bg {
+  margin-top: 3.8rem;
+  width: 100%;
+  position: relative;
+}
+
+.seoul-item-text--mobile{
+  display:none;
+
+}
+
+.seoul-video-bg::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 1)
+  );
+}
+.seoul-video {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.seoul-detail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-box3{
+  text-align: right;
+}
+
+.detail-box1{
+position: relative;
+}
+
+.detail-icon{
+  position: absolute;
+  left: -3.5rem;
+}
+
+.seoul-detail_title {
+  height: 21.875rem;
+}
+.detail-box-wrap {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0rem 1rem 3.75rem;
+  background-color: black;
+  justify-content: space-between;
+}
+
+
+.detail-box p {
+  color: #dcdcdc;
+  width: 21rem;
+  font-family: 'SInter';
+  line-height: 27px;
+  font-size: 19.8px;
+  text-transform: uppercase;
+}
+
+.detail-box-inline::before {
+  position: relative;
+  left: -10px;
+  content: '/';
+  font-size: 24px;
+  color: #435aff;
+}
+
+.seoul-bg2 {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 31.25rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.seoul-hackerhouse-text {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seoul-hackerhouse-detail {
+  width: 76%;
+  height: 4rem;
+  font-family: 'SInter';
+  font-size: 2.4rem;
+  line-height: 54px;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+}
+
+.blod {
+  color: #435aff;
+}
+
+.seoul-title-box{
+  position: relative;
+}
+
+.seoul-title-arrow{
+position: absolute;
+left: 390px;
+top: 85px;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image:url("../../../content/images/hackerhouse/seoul/arrow.png") ;
+}
+
+.seoul-title {
+  text-align: center;
+  padding: 10rem 0;
+  font-family: 'Thunder';
+  font-size: 11rem;
+  align-items: center;
+  color: #dcdcdc;
+}
+
+.seoul-detail_title{
+font-family: 'Thunder';
+font-style: normal;
+font-weight: 700;
+font-size: 11rem;
+line-height: 10rem;
+color: #FFFFFF;
+padding: 2rem 0 0 2rem;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: row;
+  gap: 13rem;
+  padding-bottom: 3.125rem;
+}
+
+.schdule-leftbox,
+.schdule-rightbox {
+  margin-bottom: 5rem;
+}
+
+.circle {
+  width: 62.31px;
+  height: 43.58px;
+  left: 0px;
+  top: 0px;
+  border: 1px solid #435aff;
+  border-radius: 52.95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #435aff;
+  margin-bottom: 2rem;
+}
+
+.schedule-title {
+  font-family: 'Thunder';
+  font-size: 3.75rem;
+  line-height: 80px;
+  color: #dcdcdc;
+  margin-bottom: 1rem;
+}
+
+
+.schedule-detail {
+  font-family: 'Inter';
+  font-size: 18.4px;
+  line-height: 31px;
+  color: #7c7c7c;
+  margin-bottom: 4rem;
+  width: 25rem;
+  height: 12rem;
+}
+
+.participate-title {
+  margin: 5rem 0;
+  font-family: 'Thunder';
+  font-style: normal;
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #dcdcdc;
+}
+
+.participate-ppl li {
+  font-size: 2rem;
+  font-family: 'SInter';
+  font-size: 38.8px;
+  line-height: 88px;
+  display: flex;
+  align-items: center;
+  color: #f5f5f6;
+}
+
+.participate-attention {
+  margin-top: 3.5rem;
+  display: flex;
+  gap: .625rem;
+}
+
+.flower {
+  color: #435aff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.quetion {
+  color: #7c7c7c;
+  font-family: 'SInter';
+  font-size: 1.15rem;
+  line-height: 1rem;
+}
+
+.applynow {
+  font-size: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding-top: 3.125rem;
+}
+
+.applynow-title {
+  font-family: 'SInter';
+  font-style: normal;
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+  color: #dcdcdc;
+  text-align: center;
+}
+.participate-title::before {
+  position: relative;
+  top: 0.325rem;
+  padding-right: 0.5rem;
+  content: '/';
+  font-size: 8rem;
+  color: #435aff;
+}
+
+.applynow-title::before {
+  left: 0.975rem;
+  padding-right: 0.5rem;
+  content: '/';
+  font-size: 2.2rem;
+  color: #435aff;
+}
+
+.applynow img {
+  max-width: 10rem;
+  height: auto;
+  text-align: center;
+}
+.seoul_button {
+  font-family: 'SInter';
+  width: 21rem;
+  height: 5.8rem;
+  border: 2px solid #435aff;
+  border-radius: 960px;
+  background-color: black;
+  color: #dcdcdc;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.seoul_button:hover {
+  background-color: #435aff;
+  -webkit-box-shadow: 10px 10px 99px 6px #435aff;
+  -moz-box-shadow: 10px 10px 99px 6px #435aff;
+  box-shadow: 10px 10px 99px 6px #435aff;
+  border-color: white;
+  color: white;
+}
+
+.blanke {
+  margin-left:10px;
+}
+
+
+.seoul_button2{
+  background-color: black;
+}
+.slide-button {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+
+
+.slide-background {
+  position: absolute;
+  top: 0;
+  left: -120px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #5465EC;
+  transition: transform 0.5s ease-in-out;
+}
+
+.defdiv{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  transition: transform 0.5s ease-in-out;
+  background-color: #000;
+  text-align: center;
+}
+
+
+
+/* 移动端 */
+.seoul-web,
+.seoul-mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 380px) {
+  .seoul-web {
+    display: none;
+  }
+
+  .seoul-item-text--web{
+    display: none;
+  }
+  .seoul-item-text--mobile{
+    display: block;
+    word-break:break-all;
+  }
+
+  .seoul-mobile {
+    width: 100vw;
+    height: 3rem;
+    padding-bottom: 0rem;
+    display: flex;
+    background-image: url('../../../content/images/navi/Navbar_small.png');
+    top: 0;
+    background-color: white;
+    z-index: 9999999999;
+  }
+
+  .seoul-mobile .seoul-mobilelogo {
+    width: 8.3125rem;
+    height: 1.5625rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  .seoul-mobile .seoul-menu {
+    background-image: url('../../../content/images/navi/menu.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1.5625rem;
+    width: 1.5625rem;
+    right: 1rem;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .seoul-mobile ul {
+    width: 100%;
+    top: 5rem;
+    flex-direction: column;
+    position: relative;
+    right: 0px;
+    z-index: 9999;
+  }
+
+  .seoul-navi-links {
+    display: flex;
+    gap: 0rem;
+    justify-content: flex-end;
+    right: 12px;
+  }
+
+  .seoul-navi-links__item {
+    font-family: 'mobileMontserrat';
+    font-size: 0.875rem;
+    height: 3.75rem;
+    background-image: url('../../../content/images/navi/navibg_small.png');
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .seoul-navi-links__item img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .seoul-video-bg {
+    margin-top: -0.4rem;
+}
+
+.seoul2 {
+  padding: 0rem;
+  height: 275rem;
+  background-color: black;
+}
+
+  .seoul-detail_title{
+  font-size: 5rem;
+  line-height: 5rem;
+  padding: 1rem 0 0 1rem;
+  text-align:center;
+  }
+
+  .schedule-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .seoul-video{
+    display:none;
+  }
+
+  .seoul-video-bg{
+    background-image: url("../../../content/images/hackerhouse/seoul/seoulmobilebg.svg");
+    width: 100%;
+    height: 30rem;
+  }
+
+  .seoul-video-bg {
+    margin-top: 0rem;
+    width: 100%;
+
+  }
+
+  .detail-box-wrap {
+    margin-top: 20rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0rem 2rem 0.8rem;
+    gap: 4.5rem;
+
+}
+.seoul-video-bg::after {
+  display: none;
+}
+
+.detail-box2{
+  text-align: right;
+}
+.detail-box3 {
+  text-align: left;
+}
+
+.seoul-hackerhouse-detail {
+  margin-top: 2.125rem;
+  width: 90%;
+  height: 5rem;
+  font-family: 'SInter';
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  z-index: 0;
+  color: #707070;
+  text-align: left;
+}
+
+
+.seoul-title {
+  padding: 32rem 0 0 0;
+  font-size: 4rem;
+}
+
+.seoul-title::before {
+  top: -50px;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  padding: 1rem;
+}
+
+.participate-title {
+  margin: 5rem 0;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #dcdcdc;
+}
+
+.participate-title::before {
+  font-size: 3rem;
+
+}
+
+.schedule-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.schedule-detail {
+  font-family: 'Inter';
+  font-size: 18.4px;
+  line-height: 31px;
+  color: #7c7c7c;
+  margin-bottom: 4rem;
+  width: 18rem;
+  height: 10rem;
+}
+
+.schedule-detail2{
+  height: 17rem;
+}
+
+.schedule li img{
+  width: 90%;
+}
+.schedule {
+  gap: 5rem;
+  padding: 3rem 1rem;
+}
+.applynow-title {
+  font-size: 1.2rem;
+
+}
+.seoul_button {
+  font-family: 'SInter';
+  width: 12.5rem;
+  height: 3.6rem;
+  border: 2px solid #435aff;
+  border-radius: 30rem;
+  background-color: black;
+  color: #dcdcdc;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.seoul_button:hover {
+  background-color: #435aff;
+  -webkit-box-shadow: 10px 10px 99px 6px #435aff;
+  -moz-box-shadow: 10px 10px 99px 6px #435aff;
+  box-shadow: 10px 10px 99px 6px #435aff;
+  border-color: white;
+  color: white;
+}
+.participate-gap{
+  margin-top: 128rem;
+}
+
+.participate-title {
+  margin: 3rem 0;
+}
+
+.participate-ppl li {
+  font-size: 2rem;
+  font-family: 'SInter';
+  font-size: 20px;
+  line-height: 42px;
+}
+
+.applynow {
+padding-top: 0rem;
+}
+
+.seoul-title-arrow {
+  left: 40px;
+  top: 450px;
+}
+
+.seoul-hackerhouse-text {
+  position: absolute;
+  top:330px;
+  left: 25%;
+}
+
+.detail-box2{
+  background-image: url("../../../content/images/hackerhouse/seoul/bigbluearrow.png");
+  background-repeat: no-repeat;
+  background-position:30%;
+}
+
+
+
+}
+
+
+
+@media (min-width: 381px) and (max-width: 580px) {
+
+  .seoul-web {
+    display: none;
+  }
+
+  .seoul-item-text--web{
+    display: none;
+  }
+  .seoul-item-text--mobile{
+    display: block;
+    word-break:break-all;
+  }
+
+  .seoul-mobile {
+    width: 100vw;
+    height: 3rem;
+    padding-bottom: 0rem;
+    display: flex;
+    background-image: url('../../../content/images/navi/Navbar_small.png');
+    top: 0;
+    background-color: white;
+    z-index: 9999999999;
+  }
+
+  .seoul-mobile .seoul-mobilelogo {
+    width: 8.3125rem;
+    height: 1.5625rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  .seoul-mobile .seoul-menu {
+    background-image: url('../../../content/images/navi/menu.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1.5625rem;
+    width: 1.5625rem;
+    right: 1rem;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .seoul-mobile ul {
+    width: 100%;
+    top: 5rem;
+    flex-direction: column;
+    position: relative;
+    right: 0px;
+    z-index: 9999;
+  }
+
+  .seoul-navi-links {
+    display: flex;
+    gap: 0rem;
+    justify-content: flex-end;
+    right: 12px;
+  }
+
+  .seoul-navi-links__item {
+    font-family: 'mobileMontserrat';
+    font-size: 0.875rem;
+    height: 3.75rem;
+    background-image: url('../../../content/images/navi/navibg_small.png');
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .seoul-navi-links__item img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .seoul-video-bg {
+    margin-top: -0.4rem;
+}
+
+.seoul2 {
+  padding: 0rem;
+  height: 300rem;
+  background-color: black;
+}
+
+  .seoul-detail_title{
+  font-size: 5.6rem;
+  line-height: 6rem;
+  padding: 1rem 0 0 1rem;
+  text-align:center;
+  }
+
+  .seoul-title-arrow {
+    left: 45px;
+    top: 450px;
+  }
+  .schedule-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .seoul-video{
+    display:none;
+  }
+
+  .seoul-video-bg{
+    background-image: url("../../../content/images/hackerhouse/seoul/seoulmobilebg.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 31rem;
+  }
+
+  .seoul-video-bg {
+    margin-top: 0rem;
+    width: 100%;
+  }
+
+  .detail-box-wrap {
+    margin-top: 20rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0rem 2rem 0.8rem;
+    gap: 4.5rem;
+}
+
+.seoul-video-bg::after {
+  display: none;
+}
+
+.detail-box2{
+  text-align: right;
+}
+.detail-box3 {
+  text-align: left;
+}
+
+.seoul-hackerhouse-detail {
+  margin-top: 2.125rem;
+  width: 90%;
+  height: rem;
+  font-family: 'SInter';
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  z-index: 0;
+  color: #707070;
+  text-align: left;
+}
+
+.detail-box2{
+  background-image: url("../../../content/images/hackerhouse/seoul/bigbluearrow.png");
+  background-repeat: no-repeat;
+  background-position:30%;
+}
+
+.seoul-title {
+  padding: 32rem 0 0 0;
+  font-size: 4rem;
+}
+
+.seoul-title::before {
+  top: -50px;
+}
+
+.seoul-hackerhouse-text {
+  position: absolute;
+  top:330px;
+  left: 25%;
+}
+
+
+.participate-title {
+  margin: 5rem 0;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #dcdcdc;
+
+}
+
+.participate-title::before {
+  font-size: 3rem;
+
+}
+
+.schedule-detail {
+  font-family: 'Inter';
+  font-size: 18.4px;
+  line-height: 31px;
+  color: #7c7c7c;
+  margin-bottom: 4rem;
+  width: 22rem;
+  height: 8rem;
+}
+
+.schedule-detail2{
+  height: 14rem;
+}
+
+.schedule li img{
+  width: 90%;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 3rem 1rem;
+}
+
+.seoul_button {
+  font-family: 'SInter';
+  width: 12.5rem;
+  height: 3.6rem;
+  border: 2px solid #435aff;
+  border-radius: 30rem;
+  background-color: black;
+  color: #dcdcdc;
+  font-size: 1.2rem;
+}
+
+
+.seoul_button:hover {
+  background-color: #435aff;
+  -webkit-box-shadow: 10px 10px 99px 6px #435aff;
+  -moz-box-shadow: 10px 10px 99px 6px #435aff;
+  box-shadow: 10px 10px 99px 6px #435aff;
+  border-color: white;
+  color: white;
+}
+
+
+.participate-gap{
+  margin-top: 128rem;
+}
+
+.participate-title {
+  margin: 3rem 0;
+}
+
+.participate-ppl li {
+  font-size: 2rem;
+  font-family: 'SInter';
+  font-size: 20px;
+  line-height: 42px;
+}
+
+.applynow {
+padding-top: 0rem;
+}
+
+}
+
+@media (min-width: 581px) and (max-width: 1400px) {
+  .seoul-mobile {
+    display: none;
+  }
+
+  .seoul-item-text--web{
+    display: block;
+    word-break:break-all;
+
+  }
+  .seoul-item-text--mobile{
+    display: none;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1700px) {
+  .seoul-mobile {
+    display: none;
+  }
+
+  .seoul-item-text--web{
+    display: block;
+    word-break:break-all;
+
+  }
+  .seoul-item-text--mobile{
+    display: none;
+  }
+  .schedule li img{
+    width: 79%;
+  }
+  .schdule-rightbox img{
+    width: 70%;
+  }
+  .schedule-detail {
+    width: 22rem;
+    height: 12rem;
+}
+
+.schedule-title {
+  font-size: 3rem;
+}
+.seoul2 {
+  padding: 0px 3rem;
+}
+
+.seoul-detail_title {
+  font-size: 9rem;
+}
+
+.seoul-hackerhouse-detail {
+  font-size: 2rem;
+}
+
+
+
+}
+
+
+@media (min-width: 2000px) and (max-width: 2600px) {
+  .seoul-web {
+    max-width: 1920px;
+  }
+
+}

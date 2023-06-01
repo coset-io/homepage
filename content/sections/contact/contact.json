@@ -1,0 +1,11 @@
+{
+  "description": "If you have any problem, create an issue in the GitHub repository.",
+  "image": {
+    "src": "",
+    "alt": "Antalpha Labs Logo"
+  },
+  "socialProfiles": {
+    "from": [ "Github"],
+    "showIcons": true
+  }
+}

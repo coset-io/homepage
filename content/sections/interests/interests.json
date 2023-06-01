@@ -1,0 +1,44 @@
+{
+  "interests": [
+    {
+      "label": "Developers",
+      "image": {
+        "src": "../../images/favicon.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Researchers",
+      "image": {
+        "src": "../../images/favicon.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Designers",
+      "image": {
+        "src": "../../images/favicon.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Writers",
+      "image": {
+        "src": "../../images/favicon.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Event Organizers",
+      "image": {
+        "src": "../../images/favicon.png",
+        "alt": ""
+      }
+    }
+  ],
+  "button": {
+    "visible": false,
+    "label": "+ Load More",
+    "initiallyShownInterests": 5
+  }
+}

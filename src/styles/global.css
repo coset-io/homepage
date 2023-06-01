@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ps";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url(/fonts/PitchSans-Regular.woff) format("woff2");
+}
+
+@font-face {
+  font-family: "fa";
+  font-weight: 400;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Feijoa Display.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "fa";
+  font-weight: 500;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Feijoa Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "fa";
+  font-weight: 500;
+  font-style: italic;
+  src: url("/fonts/Feijoa Medium Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "fa";
+  font-weight: 600;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("/fonts/Feijoa Bold.otf") format("opentype");
+}
+
+:root {
+  --font-ps: "ps";
+  --font-fa: "fa";
+}

@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "visible": true,
+      "category": "🧰 Defi",
+      "title": "Defi Financial Engineering Tools",
+      "description": "Zelos is a group under Antalpha Labs. We focus on providing serious financial engineering tools for Defi. You can find in-depth and independent third-party reports, our open-source repository (e.g., backtesting v3), and high-level modeling papers from our github page below. Have fun!",
+      "tags": ["Defi", "Financial Engineering", "Tool"],
+      "image": {
+        "src": "../../images/kelly-sikkema-Hl3LUdyKRic-unsplash.jpg",
+        "alt": "Extendable Layout"
+      },
+      "links": [{
+        "type": "github",
+        "url": "https://github.com/zelos-alpha"
+      }]
+    },
+    {
+      "visible": true,
+      "category": "🕹️ GameFi",
+      "title": "GameFi Profit Management",
+      "description": "At present, the game of the treasure dao ecosystem has been preliminarily available. Players hope to intuitively see the cost of investment, how much profit can be harvested each month, and when to pay back the cost (profit tax return in the future). The initial idea is based on treasure dao to complete the mvp version of this application, which mainly supports two games: https://bridgeworld.treasure.lol and https://www.talesofelleria.com.",
+      "tags": ["GameFi", "Profit Management", "Play to earn"],
+      "image": {
+        "src": "../../images/favicon.png",
+        "alt": "GameFi"
+      },
+      "links": [{
+        "type": "github",
+        "url": "https://github.com/Antalpha-Labs/ledger"
+      }]
+    }
+  ],
+  "button": {
+    "visible": false,
+    "label": "Visit on Github",
+    "url": "https://github.com/Antalpha-Labs"
+  }
+}

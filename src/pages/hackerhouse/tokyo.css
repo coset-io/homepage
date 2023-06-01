@@ -1,0 +1,898 @@
+@font-face {
+  font-family: Montserrat11;
+  src: url(/fonts/Montserrat-Regular-8.otf);
+}
+
+@font-face {
+  font-family: Montserrat22;
+  src: url(/fonts/Montserrat-Light-6.otf);
+}
+
+@font-face {
+  font-family: Montserrat33;
+  src: url(/fonts/Montserrat-Bold-3.otf);
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url(/fonts/Consolas.ttf);
+}
+
+@font-face {
+  font-family: Silkscreen-Regular;
+  src: url(/fonts/Silkscreen-Regular.ttf);
+}
+
+ul{
+  list-style: none;
+
+}
+
+p,ul{
+  margin: 0;
+  padding: 0;
+}
+
+.tokyocontainer {
+  margin: auto;
+  margin-top: 3.5rem;
+}
+
+.tokyo {
+  width: 100%;
+  /* height: 100%; */
+  height: 75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../content/images/hackerhouse/toyko/toyko.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: #572a27;
+  margin-top: 3rem;
+}
+
+.tokyo_activity {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  padding: 13.5rem;
+}
+
+.tokyo_title {
+  background-image: url("../../../content/images/hackerhouse/toyko/title.png");
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+.tokyo_theme {
+  font-family: "Consolas";
+  font-size: 4.75rem;
+  line-height: 5.375rem;
+  display: flex;
+  align-items: center;
+  color: #2222ff;
+}
+
+.tokyo_detail {
+  height: 14.0625rem;
+  width: 51.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tokyo_timeloca {
+  font-family: "Consolas";
+  font-size: 1.6rem;
+  color: #0f1227;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.tokyo_button {
+  margin-top: 2.3rem;
+  cursor: pointer;
+}
+
+.tokyoFAQsbg {
+  width: 100%;
+  padding-bottom: 3.125rem;
+  background-color: #572a27;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tokyoFAQs {
+  display: flex;
+  flex-direction: row;
+  padding: 36px 36px;
+  background-image: url("../../../content/images/hackerhouse/toyko/boxbg.png");
+  width: 90%;
+  /* height: 61.25rem; */
+  height: 46rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  /* background: #fbeed7;
+    border: 6px solid black;
+    border-radius: 20px; */
+  z-index: 2;
+  margin-top: 3rem;
+}
+
+.tokyofbox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tokyoboxtitle {
+  font-family: "Silkscreen-Regular";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 63px;
+  line-height: 80px;
+  color: #131313;
+  margin-bottom: 25px;
+}
+
+.tokyofaqsbox_list ul li {
+  list-style-type: none;
+  width: 95%;
+  height: 4.375rem;
+  padding: 1.25rem 2.6875rem 1.375rem 1.3125rem;
+  background: #ffffff;
+  border: 1px solid #e7eeec;
+  border-radius: 0.5rem;
+  font-family: "Consolas";
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  display: flex;
+  align-items: center;
+  color: #131313;
+  margin-top: 0.625rem;
+  cursor: pointer;
+}
+
+.tokyofaqsbox_list ul li.tokyohighlight {
+  background-color: #a5dd66;
+  color: black;
+  position: relative;
+}
+
+.tokyohighlight::after {
+  position: absolute;
+  background-image: url("../../../content/images/hackerhouse/toyko/whiteflower.png");
+  right: 24px;
+  content: "";
+  width: 1.5rem;
+  height: 1.5625rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.tokyoansbox_list {
+  width: 100%;
+  /* height: 70%; */
+  height: 100%;
+  border-radius: 1rem;
+  background-color: #fadb62;
+  display: flex;
+  flex-direction: column;
+  padding: 2.8125rem;
+  color: black;
+  font-family: "Consolas";
+  font-size: 1.375rem;
+  line-height: 2.25rem;
+  margin-top: 0.75rem;
+  overflow-y: auto;
+}
+
+.tokyoansbox_list div img {
+  margin-bottom: 1.875rem;
+}
+
+.tokyocontent {
+  padding: 1.2rem;
+}
+
+.tokyocontent2 {
+  margin-left: -1.5rem;
+  margin-top: -1.25rem;
+}
+
+.tokyobox img {
+  width: 100%;
+  height: 50rem;
+}
+
+.contactgap{
+  margin-top: .625rem;
+}
+.suncontact{
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 360px) {
+  .tokyocontainer {
+    margin-top: 0rem;
+  }
+  .tokyo {
+    height: 32rem;
+    background-image: url("../../../content/images/hackerhouse/toyko/toykosmall.png");
+  }
+
+  .tokyocontent {
+    margin-top: 0;
+    overflow-y: auto;
+    padding: 1.2rem 0.5rem;
+  }
+
+  .tokyo_activity {
+    padding: 7rem;
+  }
+
+  .tokyo_box {
+    width: 21.875rem;
+    height: 12.5rem;
+    margin: 0 0 3.125rem 0;
+  }
+
+  .tokyo_detail img {
+    width: 88%;
+
+  }
+  .tokyo_detail a {
+    width: 10rem;
+  }
+  .tokyo_detail a img{
+   margin-top: 1.2rem;
+  }
+
+  .tokyoboxtitle {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .tokyo_theme {
+    font-size: 2.875rem;
+    line-height: 5.375rem;
+  }
+
+  .tokyo_detail {
+    height: 14.0625rem;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tokyo_timeloca {
+    font-size: 0.825rem;
+    margin-top: 0.75rem;
+  }
+
+  .tokyofaqsbox_list ul li {
+    width: 106%;
+    padding: 1.25rem 1.6875rem 1.375rem 1.3125rem;
+  }
+
+  .tokyoFAQs {
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem 2.25rem;
+    width: 90%;
+    border-radius: 1rem;
+    margin: 2rem 1.25rem 0 1.25rem;
+    background: #fbeed7;
+    border: 4px solid black;
+    border-radius: 20px;
+    height: 82rem;
+  }
+
+  .tokyoansbox_list {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 390px) {
+  .tokyocontainer {
+    margin-top: 0rem;
+  }
+  .tokyo {
+    height: 38rem;
+    background-color: #572a27;
+    background-image: url("../../../content/images/hackerhouse/toyko/toykosmall.png");
+  }
+
+  .tokyo_activity {
+    padding: 9.5rem;
+  }
+  .tokyo_detail img {
+    width: 38%;
+  }
+
+  .tokyo_box {
+    width: 21.875rem;
+    height: 12.5rem;
+    margin: 0 0 3.125rem 0;
+  }
+
+  .tokyo_title {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+  }
+
+  .tokyo_theme {
+    font-size: 2.875rem;
+    line-height: 5.375rem;
+  }
+
+  .tokyo_detail {
+    height: 14.0625rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .tokyo_detail img {
+    width: 80%;
+
+  }
+  .tokyo_detail a {
+    width: 12rem;
+  }
+  .tokyo_detail a img{
+   margin-top: 2.5rem;
+  }
+
+
+
+  .tokyo_timeloca {
+    font-size: 0.825rem;
+    margin-top: 0.75rem;
+  }
+
+  .tokyoFAQs {
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem 2.25rem;
+    width: 90%;
+    height: 68rem;
+    border-radius: 1rem;
+    margin: 0rem 1.25rem 0 1.25rem;
+
+    background: #fbeed7;
+    border: 4px solid black;
+    border-radius: 20px;
+  }
+
+  .tokyofbox {
+    height: 80%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .denver_bg {
+    height: 42.125rem;
+  }
+
+  .tokyoboxtitle {
+    font-size: 2.25rem;
+    margin-bottom: -5px;
+  }
+
+  .tokyofaqsbox_list ul li {
+    width: 16rem;
+    height: 3.125rem;
+    font-size: 0.875rem;
+    padding: 0.3125rem 0 0 0.625rem;
+  }
+
+
+  .tokyocontent {
+    margin-top: 0;
+    overflow-y: auto;
+    padding: 1.2rem 0.5rem;
+  }
+
+
+  .tokyoansbox_list {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    margin-top: 0.75rem;
+    padding: 2.1875rem 1.5625rem 1.5625rem 1.5625rem;
+  }
+
+  .tokyoansbox_list div img {
+    margin-bottom: 0.625rem;
+  }
+
+  .tokyoansbox_list {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 420px) {
+  .tokyocontainer {
+    margin-top: 0rem;
+  }
+  .tokyo {
+    height: 38rem;
+    background-color: #572a27;
+    background-image: url("../../../content/images/hackerhouse/toyko/toykosmall.png");
+  }
+
+  .tokyo_activity {
+    padding: 9.5rem;
+  }
+  .tokyo_detail img {
+    width: 38%;
+  }
+
+  .tokyo_box {
+    width: 21.875rem;
+    height: 12.5rem;
+    margin: 0 0 3.125rem 0;
+  }
+
+  .tokyo_title {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+  }
+
+  .tokyo_theme {
+    font-size: 2.875rem;
+    line-height: 5.375rem;
+  }
+
+  .tokyo_detail {
+    height: 14.0625rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .tokyo_detail img {
+    width: 80%;
+
+  }
+  .tokyo_detail a {
+    width: 12rem;
+  }
+  .tokyo_detail a img{
+   margin-top: 2.5rem;
+  }
+
+
+
+  .tokyo_timeloca {
+    font-size: 0.825rem;
+    margin-top: 0.75rem;
+  }
+
+  .tokyoFAQs {
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem 2.25rem;
+    width: 90%;
+    height: 68rem;
+    border-radius: 1rem;
+    margin: 0rem 1.25rem 0 1.25rem;
+
+    background: #fbeed7;
+    border: 4px solid black;
+    border-radius: 20px;
+  }
+
+  .tokyofbox {
+    height: 80%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .denver_bg {
+    height: 42.125rem;
+  }
+
+  .tokyoboxtitle {
+    font-size: 2.25rem;
+    margin-bottom: -5px;
+  }
+
+  .tokyofaqsbox_list ul li {
+    width: 18rem;
+    height: 3.125rem;
+    font-size: 0.875rem;
+    padding: 0.3125rem 0 0 0.625rem;
+  }
+
+
+  .tokyocontent {
+    margin-top: 0;
+    overflow-y: auto;
+    padding: 1.2rem 0.5rem;
+  }
+
+
+  .tokyoansbox_list {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    margin-top: 0.75rem;
+    padding: 2.1875rem 1.5625rem 1.5625rem 1.5625rem;
+  }
+
+  .tokyoansbox_list div img {
+    margin-bottom: 0.625rem;
+  }
+
+  .tokyoansbox_list {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 550px) {
+  .tokyocontainer {
+    margin-top: 0rem;
+  }
+  .tokyo {
+    height: 51rem;
+    background-color: #572a27;
+    background-image: url("../../../content/images/hackerhouse/toyko/toykosmall.png");
+  }
+
+  .tokyo_activity {
+    padding: 12rem;
+  }
+  .tokyo_detail img {
+    width: 38%;
+  }
+
+  .tokyo_box {
+    width: 21.875rem;
+    height: 12.5rem;
+    margin: 0 0 3.125rem 0;
+  }
+
+  .tokyo_title {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+  }
+
+  .tokyo_theme {
+    font-size: 2.875rem;
+    line-height: 5.375rem;
+  }
+
+  .tokyo_detail {
+    height: 14.0625rem;
+    width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tokyo_detail img {
+    width: 70%;
+
+  }
+  .tokyo_detail a {
+    width: 18rem;
+  }
+  .tokyo_detail a img{
+   margin-top: 3.5rem;
+  }
+
+
+
+  .tokyo_timeloca {
+    font-size: 0.825rem;
+    margin-top: 0.75rem;
+  }
+
+  .tokyoFAQs {
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem 2.25rem;
+    width: 90%;
+    height: 72rem;
+    border-radius: 1rem;
+    margin: 0rem 1.25rem 0 1.25rem;
+
+    background: #fbeed7;
+    border: 4px solid black;
+    border-radius: 20px;
+  }
+
+  .tokyofbox {
+    height: 80%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .tokyoboxtitle {
+    font-size: 2.25rem;
+    margin-bottom: -5px;
+  }
+
+  .tokyofaqsbox_list ul li {
+    width: 24rem;
+    height: 3.125rem;
+    font-size: 0.875rem;
+    padding: 0.3125rem 0 0 0.625rem;
+  }
+
+  .tokyocontent {
+    margin-top: 0;
+    padding: 1.2rem 0.5rem;
+    overflow-y: auto;
+
+  }
+
+  .tokyoansbox_list {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    margin-top: 0.75rem;
+    padding: 2.1875rem 1.5625rem 1.5625rem 1.5625rem;
+  }
+
+  .tokyoansbox_list div img {
+    margin-bottom: 0.625rem;
+  }
+
+  .tokyoansbox_list {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 767px) {
+  .tokyocontainer {
+    margin-top: 0rem;
+  }
+  .tokyo {
+    margin-top: 5.5rem;
+    height: 29rem;
+    background-color: #572a27;
+  }
+
+  .tokyo_activity {
+    padding: 4rem;
+  }
+  .tokyo_detail img {
+    width: 45%;
+  }
+
+  .tokyo_box {
+    width: 21.875rem;
+    height: 12.5rem;
+    margin: 0 0 3.125rem 0;
+  }
+
+  .tokyo_title {
+    font-size: 3.125rem;
+    line-height: 2.5rem;
+  }
+
+  .tokyo_theme {
+    font-size: 2.875rem;
+    line-height: 5.375rem;
+  }
+
+  .tokyo_detail {
+    height: 14.0625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tokyo_timeloca {
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+  }
+
+  .tokyoFAQs {
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem 2.25rem;
+    width: 90%;
+    height: 66rem;
+    border-radius: 1rem;
+    margin: 2rem 1.25rem 0 1.25rem;
+
+    background: #fbeed7;
+    border: 4px solid black;
+    border-radius: 20px;
+  }
+
+  .tokyofbox {
+    height: 80%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .denver_bg {
+    height: 42.125rem;
+  }
+
+  .tokyoboxtitle {
+    font-size: 2.25rem;
+    margin-bottom: -5px;
+  }
+
+  .tokyofaqsbox_list ul li {
+    width: 31.5rem;
+    height: 3.125rem;
+    font-size: 0.875rem;
+    padding: 0.3125rem 0 0 0.625rem;
+  }
+
+  .tokyocontent {
+    margin-top: 0;
+    overflow-y: auto;
+  }
+
+  .tokyoansbox_list {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    margin-top: 0.75rem;
+    padding: 2.1875rem 1.5625rem 1.5625rem 1.5625rem;
+  }
+
+  .tokyoansbox_list div img {
+    margin-bottom: 0.625rem;
+  }
+
+  .tokyoansbox_list {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .tokyo {
+    margin-top: 5.5rem;
+    height: 30rem;
+  }
+  .tokyo_activity {
+    padding: 5rem;
+  }
+  .tokyo_detail img {
+    width: 50%;
+  }
+
+  .tokyofaqsbox_list ul li {
+    font-size: 1rem;
+  }
+  .tokyoansbox_list {
+    font-size: 1rem;
+  }
+
+  .tokyoansbox_list {
+    height: 75%;
+  }
+
+  .tokyo_timeloca {
+    font-size: 1.2rem;
+    margin-top: 0.75rem;
+  }
+
+  .tokyo_button {
+    margin-top: 1rem;
+  }
+
+  .tokyoboxtitle {
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+  }
+
+  .tokyoFAQs {
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem 2.25rem;
+    width: 90%;
+    height: 72rem;
+    border-radius: 1rem;
+    margin: 2rem 1.25rem 0 1.25rem;
+    background: #fbeed7;
+    border: 4px solid black;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1330px) {
+  .tokyo {
+    margin-top: 5.5rem;
+    height: 40rem;
+  }
+  .tokyo_activity {
+    padding: 9rem;
+  }
+  .tokyo_detail img {
+    width: 50%;
+  }
+  .tokyoboxtitle {
+    font-size: 3.5rem;
+  }
+
+
+
+  .tokyofaqsbox_list ul li {
+    font-size: 1rem;
+  }
+  .tokyoansbox_list {
+    font-size: 1rem;
+  }
+
+  .tokyoansbox_list {
+    height: 65%;
+  }
+
+  .tokyoFAQs {
+    height: 43rem;
+  }
+}
+
+@media (min-width: 1331px) and (max-width: 1500px) {
+  .tokyo {
+    height: 56rem;
+    margin-top: 3.5rem;
+  }
+
+  .tokyo_activity {
+    padding: 9rem;
+  }
+  .tokyo_detail img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 1700px) {
+  .tokyo {
+    height: 64rem;
+    margin-top: 3.625rem;
+  }
+
+  .tokyo_activity {
+    padding: 12rem;
+  }
+  .tokyo_detail img {
+    width: 80%;
+  }
+
+  .tokyoansbox_list {
+    height: 75%;
+  }
+}
+
+@media (min-width: 1701px) and (max-width: 2000px) {
+  .tokyoansbox_list {
+    height: 80%;
+  }
+  .tokyoFAQs {
+    height: 71.25rem;
+  }
+}
+
+@media (min-width: 2000px) and (max-width: 2600px) {
+  .tokyo .tokyocontainer {
+    max-width: 1920px;
+  }
+}
