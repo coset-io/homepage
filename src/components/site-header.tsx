@@ -69,34 +69,38 @@ export default function Header(props: DisclosureProps<"header">) {
           </div>
 
           <Disclosure.Panel className="lg:hidden">
-            <div className="space-y-1 pb-3 pt-2">
+            <div className="space-y-1 pb-3">
               <Disclosure.Button
-                as="a"
-                href="#"
-                className="block py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                as={Link}
+                to="/hackerhouse"
+                className="uppercase block py-3 px-6 text-sm font-medium text-web-black hover:border-web-gray hover:bg-web-tile"
+                activeClassName="border-web-gray bg-web-tile"
               >
-                Dashboard
+                Hackerhouse
               </Disclosure.Button>
               <Disclosure.Button
-                as="a"
-                href="#"
-                className="block py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                as={Link}
+                to="/blog"
+                className="uppercase block py-3 px-6 text-sm font-medium text-web-black hover:border-web-gray hover:bg-web-tile"
+                activeClassName="border-web-gray bg-web-tile"
               >
-                Team
+                Blog
               </Disclosure.Button>
               <Disclosure.Button
-                as="a"
-                href="#"
-                className="block py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                as={Link}
+                to="/showcases"
+                className="uppercase block py-3 px-6 text-sm font-medium text-web-black hover:border-web-gray hover:bg-web-tile"
+                activeClassName="border-web-gray bg-web-tile"
               >
-                Projects
+                Showcases
               </Disclosure.Button>
               <Disclosure.Button
-                as="a"
-                href="#"
-                className="block py-2 pl-3 pr-4 text-base font-medium hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                as={Link}
+                to="/contact"
+                className="uppercase block py-3 px-6 text-sm font-medium text-web-black hover:border-web-gray hover:bg-web-tile"
+                activeClassName="border-web-gray bg-web-tile"
               >
-                Calendar
+                Contact
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>

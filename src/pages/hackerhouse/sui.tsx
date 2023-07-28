@@ -29,9 +29,10 @@ export default function Sui() {
         <motion.div
           ref={ref}
           className={cx(
-            "sticky top-0 z-20 overflow-x-auto transition duration-300 ease-in-out bg-web-tile backdrop-blur-0",
-            elementInViewportProgress.get() === 1 &&
-              "bg-web-tile/80 backdrop-blur-lg border-b-2",
+            "sticky top-0 z-20 overflow-x-auto transition-colors duration-300 ease-in-out",
+            elementInViewportProgress.get() === 1
+              ? "bg-web-paper/90 backdrop-blur-lg border-b border-web-gray"
+              : "bg-transparent backdrop-blur-0 border-b border-transparent",
           )}
         >
           <Subheader items={["overview", "partners"]} />
