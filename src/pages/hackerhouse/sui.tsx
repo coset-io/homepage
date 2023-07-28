@@ -20,9 +20,9 @@ export const Head = () => (
   />
 )
 
+const context = { index: 0 }
 export default function Sui() {
   const { ref, elementInViewportProgress } = useElementInViewportProgress()
-  const context = { index: 0 }
 
   return (
     <ActiveAnchorProvider>
