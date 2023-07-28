@@ -137,6 +137,7 @@ export const useActiveInView = ({
 
   return {
     observeElement: (
+      // margin: -80px; to avoid overlap with the sticky header
       <span className="absolute -mt-20" id={id} ref={obRef} />
     ),
   }

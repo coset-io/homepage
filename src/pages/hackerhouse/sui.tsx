@@ -8,13 +8,15 @@ import { Subheader } from "../../components/subheader"
 import { Hero } from "../../components/sui/hero"
 import { Partners } from "../../components/sui/partners"
 import { useElementInViewportProgress } from "../../hooks/use-element-in-viewport-progress"
-import { ActiveAnchorProvider } from "../../components/providers/active-anchor"
 import { InViewSection } from "../../components/in-view-section"
+import poster from "../../components/sui/images/poster.png"
+import { ActiveAnchorProvider } from "../../components/providers/active-anchor"
 
 export const Head = () => (
   <SEO
     title="HackerHouse Sui Event"
     description="Antalpha Labs is a web3 developer community"
+    image={poster}
   />
 )
 

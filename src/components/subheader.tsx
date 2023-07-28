@@ -16,7 +16,7 @@ const ActiveHeadingLink = ({
         activeAnchor[id]?.isActive && "font-normal text-web-black",
         activeAnchor[id]?.isActive
           ? "text-web-black font-normal subpixel-antialiased"
-          : "text-web-gray hover:text-gray-900",
+          : "text-web-gray/70 hover:text-gray-900",
       )}
       href={`#${id}`}
     >
