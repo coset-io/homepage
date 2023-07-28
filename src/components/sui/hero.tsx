@@ -8,7 +8,7 @@ export const Hero = (props: React.ComponentProps<"div">) => {
       <LazyLoadImage
         alt="Antalpha sui event poster"
         placeholder={
-          <div className="px-8 w-full h-[1200px] mx-auto bg-blue-300 opacity-80 blur-lg" />
+          <div className="my-8 mx-auto w-[94%] h-[1200px] bg-[#9fbffb] opacity-80 blur-lg" />
         }
         src={poster}
         height="100%"
