@@ -1,6 +1,9 @@
 import React, { PropsWithChildren } from "react"
+import { motion } from "framer-motion"
 import cx from "clsx"
+
 import { useActiveAnchor } from "./providers/active-anchor"
+import { useElementInViewportProgress } from "../hooks/use-element-in-viewport-progress"
 
 type ActiveHeadingLinkProps = { id: string }
 
@@ -19,6 +22,7 @@ const ActiveHeadingLink = ({
           : "text-web-gray/70 hover:text-gray-900",
       )}
       href={`#${id}`}
+      rel="same"
     >
       {children}
     </a>
@@ -31,17 +35,31 @@ type SubheaderProps = {
 }
 
 export const Subheader = ({ items, className }: SubheaderProps) => {
+  const { ref, elementInViewportProgress } = useElementInViewportProgress()
+
   if (!items?.length) {
     return null
   }
 
   return (
-    <div className={cx("container mx-auto", className)}>
-      <div className="flex space-x-6 py-3 px-4 lg:px-8">
-        {items.map((x) => (
-          <ActiveHeadingLink id={x}>{x}</ActiveHeadingLink>
-        ))}
+    <motion.div
+      ref={ref}
+      className={cx(
+        "sticky top-0 z-20 overflow-x-auto transition-colors duration-300 ease-in-out",
+        elementInViewportProgress.get() === 1
+          ? "bg-web-paper/90 backdrop-blur-lg border-b border-web-gray"
+          : "bg-transparent backdrop-blur-0 border-b border-transparent",
+      )}
+    >
+      <div className={cx("container mx-auto", className)}>
+        <div className="flex space-x-6 py-3 px-4 lg:px-8">
+          {items.map((x) => (
+            <ActiveHeadingLink id={x} key={x}>
+              {x}
+            </ActiveHeadingLink>
+          ))}
+        </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

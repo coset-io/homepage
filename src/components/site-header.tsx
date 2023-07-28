@@ -25,28 +25,28 @@ export default function Header(props: DisclosureProps<"header">) {
                 <div className="hidden lg:flex lg:space-x-8">
                   <Link
                     to="/hackerhouse"
-                    className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black"
+                    className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black hover:opacity-60"
                     activeClassName="underline-offset-2 underline"
                   >
                     Hackerhouse
                   </Link>
                   <Link
                     to="/blog"
-                    className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black"
+                    className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black hover:opacity-60"
                     activeClassName="underline-offset-2 underline"
                   >
                     Blog
                   </Link>
                   <Link
                     to="/showcases"
-                    className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black"
+                    className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black hover:opacity-60"
                     activeClassName="underline-offset-2 underline"
                   >
                     Showcases
                   </Link>
                   <Link
                     to="/contact"
-                    className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black"
+                    className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black hover:opacity-60"
                     activeClassName="underline-offset-2 underline"
                   >
                     Contact

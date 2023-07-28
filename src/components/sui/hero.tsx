@@ -1,10 +1,19 @@
 import React from "react"
 import poster from "./images/poster.png"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 export const Hero = (props: React.ComponentProps<"div">) => {
   return (
-    <div className="flex flex-col" {...props}>
-      <img src={poster} />
+    <div className="flex flex-col justify-center items-center" {...props}>
+      <LazyLoadImage
+        alt="Antalpha sui event poster"
+        placeholder={
+          <div className="px-8 w-full h-[1200px] mx-auto bg-blue-300 opacity-80 blur-lg" />
+        }
+        src={poster}
+        height="100%"
+        width="100%"
+      />
 
       <div className="flex flex-col pt-14 pb-20 justify-center items-center text-center">
         <h1 className="text-6xl font-semibold leading-tight">
