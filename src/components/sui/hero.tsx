@@ -1,5 +1,5 @@
 import React from "react"
-import poster from "./images/poster.png"
+import poster from "./images/poster.svg"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 
 export const Hero = (props: React.ComponentProps<"div">) => {
