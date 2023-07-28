@@ -3,7 +3,7 @@ import React from "react"
 export const Partners = (props: React.ComponentProps<"div">) => {
   return (
     <div
-      className="py-32 flex flex-col space-y-6 justify-center items-center bg-web-paper"
+      className="py-48 flex flex-col space-y-12 justify-center items-center bg-web-paper"
       {...props}
     >
       <div className="relative">

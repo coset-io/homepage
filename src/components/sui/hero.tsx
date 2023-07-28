@@ -6,8 +6,8 @@ export const Hero = (props: React.ComponentProps<"div">) => {
     <div className="flex flex-col" {...props}>
       <img src={poster} />
 
-      <div className="flex flex-col space-y-6 pt-14 pb-20 justify-center items-center">
-        <h1 className="text-6xl font-semibold leading-10 mb-4">
+      <div className="flex flex-col space-y-6 pt-14 pb-20 justify-center items-center text-center">
+        <h1 className="text-6xl font-semibold leading-tight mb-4">
           Antalpha HackerHouse
         </h1>
         <h1 className="text-6xl font-semibold underline decoration-2 decoration-double decoration-blue-700">
