@@ -12,7 +12,6 @@
 
 .footer {
   background-color: hsl(240, 100%, 57%);
-  width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;

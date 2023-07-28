@@ -45,6 +45,13 @@
 :root {
   --font-ps: "ps";
   --font-fa: "fa";
+  --font-inter: "inter";
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
 }
 
 a,

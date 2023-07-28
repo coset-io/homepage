@@ -1,19 +1,27 @@
+import { fontFamily } from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/wrap-page.tsx"
   ],
   theme: {
     extend: {
       fontFamily: {
         ps: ['var(--font-ps)'],
-        fa: ['var(--font-fa)']
+        fa: ['var(--font-fa)'],
+        inter: ['var(--font-inter)', ...fontFamily.sans],
       },
       colors: {
         'primary-black': '#010231',
         'secondary-black': '#222222',
-        'stone-black': '#2c2c2c'
+        'stone-black': '#2c2c2c',
+        'web-black': '#121212',
+        'web-gray': '#383738',
+        'web-paper': '#F6F6F2',
+        'web-tile': '#EBECF0'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

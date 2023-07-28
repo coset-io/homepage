@@ -7,7 +7,6 @@ import Questions from "../../components/paris/Questions"
 import Header from "../../components/paris/Header"
 import SEO from "../../components/seo"
 
-// @ts-expect-error no .png typings yet
 import ParisPoster from "../../../static/images/hackerhouse/paris/paris_poster.png"
 
 export const Head = () => (

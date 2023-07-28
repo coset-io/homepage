@@ -38,9 +38,9 @@ export default function Zkp() {
   }
   return (
     <>
-      <div className="container">
+      <Navi></Navi>
+      <div className="zkp-container">
         {/* 1、这里是logo */}
-        <Navi></Navi>
 
         {/* 2、报名页面 */}
         <div className="denver">
