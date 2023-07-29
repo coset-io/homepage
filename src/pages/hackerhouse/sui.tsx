@@ -48,9 +48,11 @@ export default function Sui() {
       <Header />
       <main className="font-inter bg-web-tile">
         <Subheader items={["overview", "partners"]} />
-        <InViewSection id="overview" context={context}>
-          <Hero />
-        </InViewSection>
+        <FadeIn>
+          <InViewSection id="overview" context={context}>
+            <Hero />
+          </InViewSection>
+        </FadeIn>
         <FadeIn>
           <InViewSection id="partners" context={context}>
             <Partners />
