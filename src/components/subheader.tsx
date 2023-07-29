@@ -31,10 +31,9 @@ const ActiveHeadingLink = ({
 
 type SubheaderProps = {
   items?: string[]
-  className?: string
 }
 
-export const Subheader = ({ items, className }: SubheaderProps) => {
+export const Subheader = ({ items }: SubheaderProps) => {
   const { ref, elementInViewportProgress } = useElementInViewportProgress()
 
   if (!items?.length) {
@@ -51,8 +50,8 @@ export const Subheader = ({ items, className }: SubheaderProps) => {
           : "bg-transparent backdrop-blur-0 border-b border-transparent",
       )}
     >
-      <div className={cx("container mx-auto", className)}>
-        <div className="flex space-x-6 py-3 px-4 lg:px-8">
+      <div className="max-w-7xl lg:container mx-auto px-2 sm:px-4 lg:px-8">
+        <div className="flex space-x-6 py-3 px-2 lg:px-0">
           {items.map((x) => (
             <ActiveHeadingLink id={x} key={x}>
               {x}

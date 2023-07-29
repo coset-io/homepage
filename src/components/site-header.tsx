@@ -11,13 +11,13 @@ export default function Header(props: DisclosureProps<"header">) {
     <Disclosure as="header" className="bg-web-paper" {...props}>
       {({ open }) => (
         <>
-          <div className="container mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="max-w-7xl lg:container mx-auto px-2 sm:px-4 lg:px-8 py-2 lg:py-0">
             <div className="flex h-16 justify-between w-full">
               <div className="flex px-2 lg:px-0 justify-between w-full">
                 <div className="flex gap-2 flex-shrink-0 items-center">
-                  <img className="h-6 w-auto" src={logo} alt="Antalpha Logo" />
+                  <img className="h-8 lg:h-6 w-auto transition-all" src={logo} alt="Antalpha Logo" />
                   <img
-                    className="h-3 w-auto"
+                    className="h-4 lg:h-3 w-auto transition-all"
                     src={logoHeading}
                     alt="Antalpha Logo Heading"
                   />
@@ -59,9 +59,9 @@ export default function Header(props: DisclosureProps<"header">) {
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <Bars3Icon className="block h-8 w-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
