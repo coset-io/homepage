@@ -43,9 +43,9 @@ export default function HackerHouse() {
     {
       signuplink: "/hackerhouse/sui",
       theme: "# Move",
-      name: "x Sui",
-      startDate: "3rd August, 2023",
-      endDate: "24th August, 2023",
+      name: "x Sui Move",
+      startDate: "3rd Sep, 2023",
+      endDate: "24th Sep, 2023",
       location: "@Dali",
     },
 
