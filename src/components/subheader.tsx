@@ -29,14 +29,12 @@ const ActiveHeadingLink = ({
   )
 }
 
-type SubheaderProps = {
-  items?: string[]
-}
-
-export const Subheader = ({ items }: SubheaderProps) => {
+export const Subheader = () => {
   const { ref, elementInViewportProgress } = useElementInViewportProgress()
+  const activeAnchor = useActiveAnchor()
+  const ids = Object.keys(activeAnchor ?? {})
 
-  if (!items?.length) {
+  if (!ids.length) {
     return null
   }
 
@@ -52,7 +50,7 @@ export const Subheader = ({ items }: SubheaderProps) => {
     >
       <div className="max-w-7xl lg:container mx-auto px-2 sm:px-4 lg:px-8">
         <div className="flex space-x-6 py-3 px-2 lg:px-0">
-          {items.map((x) => (
+          {ids.map((x) => (
             <ActiveHeadingLink id={x} key={x}>
               {x}
             </ActiveHeadingLink>

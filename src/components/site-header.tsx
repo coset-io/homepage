@@ -14,14 +14,21 @@ export default function Header(props: DisclosureProps<"header">) {
           <div className="max-w-7xl lg:container mx-auto px-2 sm:px-4 lg:px-8 py-2 lg:py-0">
             <div className="flex h-16 justify-between w-full">
               <div className="flex px-2 lg:px-0 justify-between w-full">
-                <div className="flex gap-2 flex-shrink-0 items-center">
-                  <img className="h-8 lg:h-6 w-auto transition-all" src={logo} alt="Antalpha Logo" />
+                <Link
+                  to="/"
+                  className="inline-flex gap-2 flex-shrink-0 items-center"
+                >
+                  <img
+                    className="h-8 lg:h-6 w-auto transition-all"
+                    src={logo}
+                    alt="Antalpha Logo"
+                  />
                   <img
                     className="h-4 lg:h-3 w-auto transition-all"
                     src={logoHeading}
                     alt="Antalpha Logo Heading"
                   />
-                </div>
+                </Link>
                 <div className="hidden lg:flex lg:space-x-8">
                   <Link
                     to="/hackerhouse"
@@ -30,7 +37,7 @@ export default function Header(props: DisclosureProps<"header">) {
                   >
                     Hackerhouse
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/blog"
                     className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black hover:opacity-60"
                     activeClassName="underline-offset-2 underline"
@@ -43,14 +50,13 @@ export default function Header(props: DisclosureProps<"header">) {
                     activeClassName="underline-offset-2 underline"
                   >
                     Showcases
-                  </Link>
-                  <Link
-                    to="/contact"
+                  </Link> */}
+                  <a
+                    href="mailto:hello.labs@antalpha.com"
                     className="uppercase inline-flex items-center justify-center px-1 text-sm font-medium text-web-black hover:opacity-60"
-                    activeClassName="underline-offset-2 underline"
                   >
                     Contact
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="flex items-center lg:hidden">
@@ -78,7 +84,7 @@ export default function Header(props: DisclosureProps<"header">) {
               >
                 Hackerhouse
               </Disclosure.Button>
-              <Disclosure.Button
+              {/* <Disclosure.Button
                 as={Link}
                 to="/blog"
                 className="uppercase block py-3 px-6 text-sm font-medium text-web-black hover:border-web-gray hover:bg-web-tile"
@@ -93,12 +99,11 @@ export default function Header(props: DisclosureProps<"header">) {
                 activeClassName="border-web-gray bg-web-tile"
               >
                 Showcases
-              </Disclosure.Button>
+              </Disclosure.Button> */}
               <Disclosure.Button
-                as={Link}
-                to="/contact"
+                as="a"
+                href="mailto:hello.labs@antalpha.com"
                 className="uppercase block py-3 px-6 text-sm font-medium text-web-black hover:border-web-gray hover:bg-web-tile"
-                activeClassName="border-web-gray bg-web-tile"
               >
                 Contact
               </Disclosure.Button>

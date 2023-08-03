@@ -86,7 +86,7 @@ export const Hero = (props: React.ComponentProps<"div">) => {
             @Dali, China
           </p>
           <a
-            href="http://google.com"
+            href="https://tally.so/r/3qDRDk"
             target="_blank"
             rel="external"
             className="inline-flex py-4 px-10 uppercase text-xs font-semibold bg-web-black text-white rounded-sm border border-web-black mt-6 hover:opacity-80 transition"

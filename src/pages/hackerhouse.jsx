@@ -41,6 +41,15 @@ const getBeing = (startDate, endDate) => {
 export default function HackerHouse() {
   const cardlist = [
     {
+      signuplink: "/hackerhouse/sui",
+      theme: "# Move",
+      name: "x Sui",
+      startDate: "3rd August, 2023",
+      endDate: "24th August, 2023",
+      location: "@Dali",
+    },
+
+    {
       signuplink: "/hackerhouse/paris",
       theme: "# ZKML",
       name: "x ETHCC",

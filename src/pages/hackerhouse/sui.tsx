@@ -5,7 +5,6 @@ import SEO from "../../components/seo"
 import Footer from "../../components/footer"
 import { Subheader } from "../../components/subheader"
 import { Hero } from "../../components/sui/hero"
-import { Partners } from "../../components/sui/partners"
 import { InViewSection } from "../../components/in-view-section"
 import poster from "../../components/sui/images/poster.png"
 import { ActiveAnchorProvider } from "../../components/providers/active-anchor"
@@ -47,17 +46,17 @@ export default function Sui() {
     <ActiveAnchorProvider>
       <Header />
       <main className="font-inter bg-web-tile">
-        <Subheader items={["overview", "partners"]} />
-        <FadeIn>
-          <InViewSection id="overview" context={context}>
+        <Subheader />
+        <InViewSection id="overview" context={context}>
+          <FadeIn>
             <Hero />
-          </InViewSection>
-        </FadeIn>
-        <FadeIn>
-          <InViewSection id="partners" context={context}>
+          </FadeIn>
+        </InViewSection>
+        {/* <InViewSection id="partners" context={context}>
+          <FadeIn>
             <Partners />
-          </InViewSection>
-        </FadeIn>
+          </FadeIn>
+        </InViewSection> */}
       </main>
       <Footer />
     </ActiveAnchorProvider>
