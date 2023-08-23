@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import dayjs from 'dayjs'
-import CustomParseFormat from 'dayjs/plugin/customParseFormat'
+import dayjs from "dayjs"
+import CustomParseFormat from "dayjs/plugin/customParseFormat"
 import Footer from "../components/footer"
 import "../styles/hackerhouse.css"
 import Navi from "../components/navi"
@@ -16,9 +16,9 @@ import events from "../../content/images/og/events.png"
 dayjs.extend(CustomParseFormat)
 
 const getDay = (givenDate) => {
-  const day = dayjs(givenDate, 'Do MMM, YYYY')
+  const day = dayjs(givenDate, "Do MMM, YYYY")
   if (!day.isValid()) {
-    return dayjs(givenDate, 'Do MMMM, YYYY')
+    return dayjs(givenDate, "Do MMMM, YYYY")
   }
   return day
 }
@@ -34,7 +34,6 @@ const getBeing = (startDate, endDate) => {
   if (end.diff(now) < 0) {
     return "PAST"
   }
-  console.log(end.diff(now))
   return "ONGOING"
 }
 
@@ -124,12 +123,14 @@ export default function HackerHouse() {
   const [menuType, setMenuType] = useState(0)
   const navList = ["All", "Upcoming", "Ongoing", "Past"]
   const onNavClick = (value, idx) => {
+    setMenuType(idx)
     if (value === "All") {
       return setFilteredList(() => cardlist)
     }
-    setMenuType(idx)
     const target = cardlist.filter(
-      (item) => getBeing(item.startDate, item.endDate).toUpperCase() === value.toUpperCase(),
+      (item) =>
+        getBeing(item.startDate, item.endDate).toUpperCase() ===
+        value.toUpperCase(),
     )
     setFilteredList(() => target)
   }
