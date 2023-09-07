@@ -5,6 +5,7 @@ import "./navi.css"
 import logo from "../../../content/images/antalpha/antalphalogo.svg"
 // @ts-ignore
 import logo2 from "../../../content/images/antalpha/antalphalogo2.svg"
+import { siteConfig } from "../../config"
 
 export default function Header(props: ComponentProps<"div">) {
   const [isNavShowing, setIsNavShowing] = useState(false)
@@ -29,7 +30,7 @@ export default function Header(props: ComponentProps<"div">) {
             <div className="line"></div>
           </li>
           <li className="navi-links__item2">
-            <a href="https://t.me/AntalphaLabs" target="_blank">
+            <a href={siteConfig.telegram} target="_blank">
               Join Us
             </a>
             <div className="line"></div>
@@ -140,7 +141,7 @@ export default function Header(props: ComponentProps<"div">) {
               </a>
             </li>
             <li className="navi-links__item">
-              <a href="https://t.me/AntalphaLabs">Join Us</a>
+              <a href={siteConfig.telegram}>Join Us</a>
             </li>
           </ul>
         ) : (

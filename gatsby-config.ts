@@ -1,5 +1,10 @@
 import type { GatsbyConfig } from "gatsby"
 import { createProxyMiddleware } from "http-proxy-middleware"
+import dotenv from 'dotenv'
+
+dotenv.config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -13,7 +18,7 @@ const config: GatsbyConfig = {
   },
   developMiddleware: (app) => {
     app.use(
-      "/api", // 代理的路径
+      "/api/substack", // 代理的路径
       createProxyMiddleware({
         target: "https://woshizhengqiuwan.substack.com", // 目标 API 的 URL
         changeOrigin: true, // 是否更改源（允许跨域）
@@ -46,7 +51,10 @@ const config: GatsbyConfig = {
       resolve: `gatsby-omni-font-loader`,
       options: {
         enableListener: true,
-        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
         web: [
           {
             name: `Inter`,
@@ -55,6 +63,13 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    // {
+    //   resolve: 'gatsby-source-notion',
+    //   options: {
+    //     token: process.env.NOTION_TOKEN,
+    //     databaseId: ['639176c5c36547b6a81fbc0d97a21762'],
+    //   },
+    // },
   ],
 }
 

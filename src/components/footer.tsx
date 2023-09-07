@@ -34,7 +34,7 @@ class Footer extends Component {
             "additional_referring_pub_ids": "",
             "email": email
         }
-        axios.post("/api/v1/free", formData).then((res) => {
+        axios.post("/api/substack/v1/free", formData).then((res) => {
             console.log(res);
             this.input.current.value = "";
         }).catch((error) => {

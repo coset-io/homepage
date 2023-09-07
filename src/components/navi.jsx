@@ -1,5 +1,6 @@
 import React, {useState, useRef} from "react"
 import {Link} from "gatsby"
+import { siteConfig } from '../config'
 import "./navi.css"
 
 import smalllogo from "../../content/images/navi/logo.svg"
@@ -26,7 +27,7 @@ export default(props) => {
                         <div className="line"></div>
                     </li>
                     <li className="navi-links__item2">
-                    <Link to="https://t.me/AntalphaLabs">
+                    <Link to={siteConfig.telegram}>
                             Join Us
                         </Link>
                         <div className="line"></div>
@@ -51,7 +52,7 @@ export default(props) => {
                         </Link>
                     </li>
                     <li className="navi-links__item">
-                        <Link to="https://t.me/AntalphaLabs">
+                        <Link to={siteConfig.telegram}>
                             Join Us
                         </Link>
                     </li>

@@ -4,6 +4,7 @@ import "../../styles/seoul.css"
 import { Link } from "gatsby"
 import smalllogo from "../../../content/images/navi/logo.svg"
 import SEO from "../../components/seo"
+import { siteConfig } from '../../config'
 
 import schedule1 from "../../../content/images/hackerhouse/seoul/schedule1.png"
 import schedule2 from "../../../content/images/hackerhouse/seoul/schedule2.png"
@@ -36,7 +37,7 @@ export default function Seoul() {
             <div className="seoul-line"></div>
           </li>
           <li className="seoul-navi-links__item2">
-            <Link to="https://t.me/AntalphaLabs">Join Us</Link>
+            <Link to={siteConfig.telegram}>Join Us</Link>
             <div className="seoul-line"></div>
           </li>
         </ul>
@@ -58,7 +59,7 @@ export default function Seoul() {
               </Link>
             </li>
             <li className="seoul-navi-links__item">
-              <Link to="https://t.me/AntalphaLabs">Join Us</Link>
+              <Link to={siteConfig.telegram}>Join Us</Link>
             </li>
           </ul>
         ) : (

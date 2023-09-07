@@ -4,6 +4,7 @@ import cx from "clsx"
 import Button from "./Button"
 import Card from "./Card"
 import CircleBackground from "./CircleBackground"
+import { siteConfig } from "../../config"
 
 export default function Footer() {
   return (
@@ -27,7 +28,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://t.me/AntalphaLabs"
+            href={siteConfig.telegram}
             target="_blank"
             className="underline underline-offset-4 decoration-1 tracking-widest font-ps font-medium text-sm sm:text-xl"
           >
