@@ -23,7 +23,6 @@ const PARTNERS = [
   { imageUrl: "kucoin.png", name: "kucoin" },
   { imageUrl: "sevenx.png", name: "sevenx" },
   { imageUrl: "taiko.png", name: "taiko" },
-  { imageUrl: "ecn.png", name: "ecn" },
   { imageUrl: "scroll.png", name: "scroll" },
   { imageUrl: "ofr.png", name: "ofr" },
   { imageUrl: "sui.png", name: "sui", className: "!ml-8" },
