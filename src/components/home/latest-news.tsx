@@ -14,26 +14,24 @@ const formatDate = (givenDate: string | Date) => {
 
 const DATA = [
   {
+    link: "https://mirror.xyz/antalpha-labs.eth/laGJGh1UyRbUYM6bs4cKlY7Vp6YQeZaO5QBuidCXZpA",
+    title: "Qiming & AHH #ZKonnect @ Istanbul Oct 22nd - Nov 20th 2023",
+    author: "Antalpha",
+    date: "August 15th, 2023",
+  },
+  {
+    link: "https://mirror.xyz/antalpha-labs.eth/Wl8R4-mKiZ1xMgqPyX3u_f1UN4IAzBEJb4AKcG6pjGw",
+    coverUrl:
+      "https://images.mirror-media.xyz/publication-images/_0Cu5FzIlAuzdNhQYPr9S.png?height=960&width=1920",
+    title: "Wen Building上线啦 ｜ep1 当我们谈论如何build Dex时",
+    author: "Antalpha",
+    date: "August 17th, 2023",
+  },
+  {
     link: "https://mirror.xyz/antalpha-labs.eth/rBzGa_HdvYnRnCIMl2yygfHg_nitshpGloyAkks01Go",
     coverUrl:
       "https://images.mirror-media.xyz/publication-images/PpDwK47oZzx4bcq6U4T47.jpeg?height=544&width=1088",
     title: "「对话」Moveflow Founder Troy | 构建可编程的支付系统",
-    author: "Xuan",
-    date: "August 17th, 2023",
-  },
-  {
-    link: "https://mirror.xyz/antalpha-labs.eth/2H3ufsk97XikicGQnPR5TbUKAxgK4zKJkupcpYiXv8o",
-    coverUrl:
-      "https://images.mirror-media.xyz/publication-images/zE6JOvAXtrmxJ8OMNiWVo.jpeg?height=544&width=1088",
-    title: "「对话」BuidlerDAO co-founder Diven | 区块链与AI",
-    author: "Xuan",
-    date: "August 15th, 2023",
-  },
-  {
-    link: "https://mirror.xyz/antalpha-labs.eth/ZZsE55318gbyJy7faaDDVVdNDU4asrXp3T-yoFPhrbk",
-    coverUrl:
-      "https://images.mirror-media.xyz/publication-images/JRk_yrRhLYRS5LjV_bDHn.jpeg?height=544&width=1088",
-    title: "「对话」AccountJS founder Skyh | 构建 Web3 桥梁",
     author: "Xuan",
     date: "August 17th, 2023",
   },
@@ -154,12 +152,18 @@ export const LatestNews = () => {
               href={x.link}
               target="_blank"
             >
-              <div className="rounded-xl border overflow-hidden bg-white group-hover:border-web-white/70 group-hover:shadow-lg transition-all flex justify-center items-center">
-                <img
-                  alt={`Cover of ${x.title}`}
-                  src={x.coverUrl}
-                  className="object-fill w-full h-full"
-                />
+              <div className="rounded-xl border overflow-hidden bg-white group-hover:border-web-white/70 group-hover:shadow-lg transition-all flex justify-center items-center h-full">
+                {x.coverUrl ? (
+                  <img
+                    alt={`Cover of ${x.title}`}
+                    src={x.coverUrl}
+                    className="object-fill w-full h-full"
+                  />
+                ) : (
+                  <div className="px-6">
+                    <h3 className="text-xl">{x.title}</h3>
+                  </div>
+                )}
               </div>
 
               <div className="flex justify-between">
