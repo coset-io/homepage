@@ -1,0 +1,61 @@
+.glassa-item {
+  border-radius: 9999px;
+  border-width: 2.96px;
+  border-style: solid;
+  border-color: transparent;
+  padding: 14.8px 46.07px 14.8px 46.07px;
+  position: relative;
+  box-shadow: inset 0px 0px 2.96px 0px rgba(255, 255, 255, 0.25),
+    9.94px 18.07px 9.03px 0px rgba(56, 119, 198, 0.63);
+  backdrop-filter: blur(8.88px);
+  color: #ffffff;
+  font: 400 43.36px "Rubik", sans-serif;
+  background-color: white;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  background: conic-gradient(from 100deg, #222 0%, #eee 40%, #222 100%);
+}
+
+.glass-item {
+  min-width: 342px;
+  height: 80px;
+  position: relative;
+  border-radius: 9999px;
+  background-image: linear-gradient(
+    101.84deg,
+    rgba(227, 241, 255, 1) 0%,
+    rgba(212, 229, 255, 0) 50.342774391174316%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.glass-item::before {
+  content: "";
+  position: absolute;
+  background: #8eaeed;
+  inset: 3px;
+  border-radius: 9999px;
+  z-index: 1;
+  @apply backdrop-blur;
+
+  box-shadow: inset 0px 0px 2.96px 0px rgba(255, 255, 255, 0.25),
+    9.94px 18.07px 9.03px 0px rgba(56, 119, 198, 0.63);
+}
+
+.glass-item::after {
+  opacity: 0.5;
+}
+
+.glass-item-text {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font: 400 43.36px "Rubik", sans-serif;
+}

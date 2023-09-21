@@ -16,7 +16,7 @@ export default function Header(props: DisclosureProps<"header">) {
     >
       {({ open }) => (
         <>
-          <div className="max-w-7xl md:container mx-auto px-2 md:px-4 py-2 md:py-0 sticky z-30">
+          <div className="max-w-7xl md:container mx-auto px-2 md:px-4 py-2 md:py-0 sticky z-40">
             <div className="flex h-16 justify-between w-full">
               <div className="flex px-2 md:px-0 justify-between w-full">
                 <Link
@@ -86,7 +86,7 @@ export default function Header(props: DisclosureProps<"header">) {
             as="nav"
             className="md:hidden flex w-full relative bg-inherit"
           >
-            <Disclosure.Panel className="flex fixed z-20 inset-0 w-full bg-inherit px-6 pt-[80px]">
+            <Disclosure.Panel className="flex fixed z-30 inset-0 w-full bg-inherit px-6 pt-[80px]">
               <div className="pb-3 w-full">
                 <Disclosure.Button
                   as={Link}
