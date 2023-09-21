@@ -35,11 +35,11 @@ const contents = [
 
 export const Details = () => {
   return (
-    <div className="container mx-auto space-y-9 text-center py-24">
+    <div className="container mx-auto space-y-4 lg:space-y-9 text-center py-12 lg:py-24">
       {contents.map((x) => (
         <div key={x.title} className="flex flex-col items-center justify-center space-y-4 px-8">
-          <h1 className="font-semibold text-[3.5rem]">{x.title}</h1>
-          <p className="font-light text-[2rem] text-web-gray/70 max-w-4xl">{x.content}</p>
+          <h1 className="font-semibold text-3xl md:text-5xl lg:text-[3.5rem]">{x.title}</h1>
+          <p className="font-light text-lg md:text-2xl lg:text-[2rem] text-web-gray/70 max-w-4xl">{x.content}</p>
         </div>
       ))}
     </div>
