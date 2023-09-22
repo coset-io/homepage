@@ -72,3 +72,7 @@ a:focus {
     z-index: -1;
   }
 }
+
+body {
+  @apply w-screen overflow-x-hidden;
+}

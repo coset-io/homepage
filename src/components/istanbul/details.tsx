@@ -35,13 +35,24 @@ const contents = [
 
 export const Details = () => {
   return (
-    <div className="container mx-auto space-y-4 lg:space-y-9 text-center py-12 lg:py-24">
-      {contents.map((x) => (
-        <div key={x.title} className="flex flex-col items-center justify-center space-y-4 px-8">
-          <h1 className="font-semibold text-3xl md:text-5xl lg:text-[3.5rem]">{x.title}</h1>
-          <p className="font-light text-lg md:text-2xl lg:text-[2rem] text-web-gray/70 max-w-4xl">{x.content}</p>
-        </div>
-      ))}
+    <div className="container mx-auto py-12 lg:py-24 flex flex-col justify-center items-center">
+      <h1 className="font-semibold text-6xl capitalize text-web-gray text-center">
+        Event Details
+      </h1>
+
+      <div className="flex flex-col gap-8 max-w-3xl mt-12">
+        {contents.map((x) => (
+          <div
+            key={x.title}
+            className="px-8 py-8 bg-white flex flex-col items-center justify-center text-center gap-4"
+          >
+            <h1 className="text-sm md:text-base lg:text-xl">{x.title}</h1>
+            <p className="font-light text-xs md:text-sm text-web-gray/70 max-w-4xl">
+              {x.content}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

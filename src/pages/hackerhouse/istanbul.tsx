@@ -54,14 +54,14 @@ export default function Istanbul() {
             <Hero />
           </FadeIn>
         </InViewSection>
-        <InViewSection id="details" context={context}>
-          <FadeIn>
-            <Details />
-          </FadeIn>
-        </InViewSection>
         <InViewSection id="partners" context={context}>
           <FadeIn>
             <Partners />
+          </FadeIn>
+        </InViewSection>
+        <InViewSection id="details" context={context}>
+          <FadeIn>
+            <Details />
           </FadeIn>
         </InViewSection>
       </main>

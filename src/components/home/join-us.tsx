@@ -4,7 +4,7 @@ import { siteConfig } from "../../config"
 
 export const JoinUs = () => {
   return (
-    <section className="bg-web-tile relative z-10 md:h-[640px] lg:h-screen overflow-hidden">
+    <section className="bg-web-tile relative z-10 md:h-[640px] lg:h-screen">
       <div className="container mx-auto flex flex-col justify-between h-full">
         <div className="flex flex-col items-center text-lg relative z-10 gap-5">
           <p className="text-web-gray/70 font-light">

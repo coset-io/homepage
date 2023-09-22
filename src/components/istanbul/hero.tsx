@@ -15,7 +15,7 @@ export const Hero = (props: React.ComponentProps<"div">) => {
             Antalpha HackerHouse
           </h1>
           <h1 className="text-6xl font-semibold underline decoration-2 decoration-double decoration-blue-700">
-            # ZKCONNECT
+            # ZKONNECT
           </h1>
           <p className="text-3xl leading-normal text-web-gray/70 mt-6">
             Oct. 22nd - Nov. 20th
