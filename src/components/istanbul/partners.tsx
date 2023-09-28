@@ -98,6 +98,7 @@ const partnersData = [
         />
       </svg>
     ),
+    tag: "Co-Host",
   },
 
   {
@@ -139,12 +140,21 @@ const partnersData = [
         </defs>
       </svg>
     ),
+    tag: "Partner",
   },
 
   {
     title: "secbit",
     link: "https://secbit.io/",
     icon: "/images/logo/secbit.png",
+    tag: "Tech Support",
+  },
+
+  {
+    title: "ingonyama",
+    link: "https://www.ingonyama.com/",
+    icon: "/images/logo/ingonyama.png",
+    tag: "Tech Support",
   },
 ]
 
@@ -182,25 +192,27 @@ export const Partners = (props: React.ComponentProps<"div">) => {
         </div>
       </div>
 
-      <div className="py-8 flex md:flex-row flex-col flex-wrap gap-2">
+      <div className="py-8 grid grid-cols-2 gap-2">
         {partnersData.map((x) => (
-          <a
-            href={x.link}
-            key={x.title ?? x.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="max-w-xs px-12 py-12 border border-web-gray/30 hover:opacity-75 transition flex justify-center items-center"
-          >
-            {typeof x.icon === "string" ? (
-              <img
-                src={x.icon}
-                alt={`Logo of ${x.title}`}
-                className="w-full h-full"
-              />
-            ) : (
-              x.icon
-            )}
-          </a>
+          <div key={x.title ?? x.link} className="flex flex-col h-full">
+            <a
+              href={x.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="max-w-xs px-12 py-12 border border-web-gray/30 hover:opacity-75 transition flex justify-center items-center flex-1"
+            >
+              {typeof x.icon === "string" ? (
+                <img
+                  src={x.icon}
+                  alt={`Logo of ${x.title}`}
+                  className="w-full h-full"
+                />
+              ) : (
+                x.icon
+              )}
+            </a>
+            <div className="bg-web-tile border border-web-gray/30 -mt-[1px] flex justify-center items-center py-3 text-web-black">{x.tag}</div>
+          </div>
         ))}
       </div>
     </div>

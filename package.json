@@ -20,6 +20,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
+    "@notionhq/client": "^2.2.11",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.8",
     "framer-motion": "^10.12.16",
@@ -30,8 +31,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "scroll-into-view-if-needed": "^3.0.10",
-    "swr": "^2.2.1",
-    "@notionhq/client": "^2.2.11"
+    "swr": "^2.2.1"
   },
   "devDependencies": {
     "@types/node": "^18.16.16",

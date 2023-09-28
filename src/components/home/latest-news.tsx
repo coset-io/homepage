@@ -14,10 +14,17 @@ const formatDate = (givenDate: string | Date) => {
 
 const DATA = [
   {
+    link: "https://mirror.xyz/antalpha-labs.eth/N3BKvnlaYVEHpERJSSivauPkmbCXPuD44a9xi5bHqkE",
+    coverUrl: 'https://images.mirror-media.xyz/publication-images/2n226nPDYl2EScP5BQyKb.png?height=960&width=1920',
+    title: "ep2 On proving systems - What ZKP builders need to know",
+    author: "Antalpha",
+    date: "August 25th, 2023",
+  },
+  {
     link: "https://mirror.xyz/antalpha-labs.eth/laGJGh1UyRbUYM6bs4cKlY7Vp6YQeZaO5QBuidCXZpA",
     title: "Qiming & AHH #ZKonnect @ Istanbul Oct 22nd - Nov 20th 2023",
     author: "Antalpha",
-    date: "August 15th, 2023",
+    date: "August 19th, 2023",
   },
   {
     link: "https://mirror.xyz/antalpha-labs.eth/Wl8R4-mKiZ1xMgqPyX3u_f1UN4IAzBEJb4AKcG6pjGw",
@@ -25,7 +32,7 @@ const DATA = [
       "https://images.mirror-media.xyz/publication-images/_0Cu5FzIlAuzdNhQYPr9S.png?height=960&width=1920",
     title: "Wen Building上线啦 ｜ep1 当我们谈论如何build Dex时",
     author: "Antalpha",
-    date: "August 17th, 2023",
+    date: "August 18th, 2023",
   },
   {
     link: "https://mirror.xyz/antalpha-labs.eth/rBzGa_HdvYnRnCIMl2yygfHg_nitshpGloyAkks01Go",
@@ -38,6 +45,8 @@ const DATA = [
 ]
 
 export const LatestNews = () => {
+  const last3Articles = DATA.slice(0, 3)
+  
   return (
     <section className="pt-12 md:pt-20 lg:pt-32 pb-20">
       <div className="flex flex-col container px-8 md:px-2 mx-auto relative">
@@ -146,7 +155,7 @@ export const LatestNews = () => {
         </h1>
 
         <div className="flex flex-col flex-wrap md:flex-row gap-6 md:gap-x-4 md:gap-y-6 justify-between mt-24">
-          {DATA.map((x) => (
+          {last3Articles.map((x) => (
             <a
               className="flex flex-col space-y-6 w-full md:max-w-xs xl:max-w-sm 2xl:max-w-md group"
               href={x.link}
