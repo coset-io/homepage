@@ -153,6 +153,11 @@ const partnersData = [
     icon: "/images/logo/ingonyama.png",
     tag: "Tech Support",
   },
+  {
+    title: "EZKL",
+    link: "https://github.com/zkonduit/ezkl",
+    tag: "Tech Support",
+  },
 ]
 
 export const Partners = (props: React.ComponentProps<"div">) => {
@@ -196,7 +201,7 @@ export const Partners = (props: React.ComponentProps<"div">) => {
               href={x.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="max-w-xs px-12 py-12 border border-web-gray/30 hover:opacity-75 transition flex justify-center items-center flex-1"
+              className="max-w-xs px-12 py-12 border border-web-gray/30 hover:opacity-75 transition flex justify-center items-center flex-1 hover:underline"
             >
               {typeof x.icon === "string" ? (
                 <img
@@ -204,11 +209,15 @@ export const Partners = (props: React.ComponentProps<"div">) => {
                   alt={`Logo of ${x.title}`}
                   className="w-full h-full"
                 />
-              ) : (
+              ) : React.isValidElement(x.icon) ? (
                 x.icon
+              ) : (
+                <p className="text-4xl">{x.title}</p>
               )}
             </a>
-            <div className="bg-web-tile border border-web-gray/30 -mt-[1px] flex justify-center items-center py-3 text-web-black">{x.tag}</div>
+            <div className="bg-web-tile border border-web-gray/30 -mt-[1px] flex justify-center items-center py-3 text-web-black">
+              {x.tag}
+            </div>
           </div>
         ))}
       </div>
