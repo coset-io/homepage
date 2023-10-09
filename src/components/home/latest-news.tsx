@@ -1,21 +1,34 @@
 import React from "react"
 import dayjs from "dayjs"
 import CustomParseFormat from "dayjs/plugin/customParseFormat"
+import { useNotionArticles } from "./hooks/use-notion-articles"
+import { Notion, Type } from "../../types/notion"
+import { siteConfig } from "../../config"
 
 dayjs.extend(CustomParseFormat)
 
 const formatDate = (givenDate: string | Date) => {
   const day = dayjs(givenDate, "MMM Do, YYYY")
   if (!day.isValid()) {
-    return dayjs(givenDate, "MMMM Do, YYYY").format("DD MMM, YYYY")
+    return dayjs(givenDate).format("DD MMM, YYYY")
   }
   return day.format("DD MMM, YYYY")
 }
 
-const DATA = [
+interface Article {
+  link: string
+  coverUrl?: string
+  title: string
+  date: string
+  author?: string
+  type?: Type["multi_select"]
+}
+
+const DATA: Article[] = [
   {
     link: "https://mirror.xyz/antalpha-labs.eth/N3BKvnlaYVEHpERJSSivauPkmbCXPuD44a9xi5bHqkE",
-    coverUrl: 'https://images.mirror-media.xyz/publication-images/2n226nPDYl2EScP5BQyKb.png?height=960&width=1920',
+    coverUrl:
+      "https://images.mirror-media.xyz/publication-images/2n226nPDYl2EScP5BQyKb.png?height=960&width=1920",
     title: "ep2 On proving systems - What ZKP builders need to know",
     author: "Antalpha",
     date: "August 25th, 2023",
@@ -44,9 +57,23 @@ const DATA = [
   },
 ]
 
+const notionsToArticles = (notions?: Notion[]): Article[] | undefined => {
+  const data = notions?.map((notion) => ({
+    date: notion.created_time,
+    link: notion.public_url ?? notion.url,
+    title: notion.properties.HeadTitle.title?.[0]?.plain_text,
+    type: notion.properties.Type?.multi_select,
+    author: notion.properties.Author.rich_text?.[0]?.plain_text,
+    coverUrl: notion.cover?.file?.url ?? notion.cover?.external?.url,
+  }))
+  return data
+}
+
 export const LatestNews = () => {
-  const last3Articles = DATA.slice(0, 3)
-  
+  const { data: notions } = useNotionArticles()
+  const articles = notionsToArticles(notions)
+  const latest3Articles = (articles ?? DATA).slice(0, 6)
+
   return (
     <section className="pt-12 md:pt-20 lg:pt-32 pb-20">
       <div className="flex flex-col container px-8 md:px-2 mx-auto relative">
@@ -154,50 +181,65 @@ export const LatestNews = () => {
           </svg>
         </h1>
 
-        <div className="flex flex-col flex-wrap md:flex-row gap-6 md:gap-x-4 md:gap-y-6 justify-between mt-24">
-          {last3Articles.map((x) => (
-            <a
-              className="flex flex-col space-y-6 w-full md:max-w-xs xl:max-w-sm 2xl:max-w-md group"
-              href={x.link}
-              target="_blank"
-            >
-              <div className="rounded-xl border overflow-hidden bg-white group-hover:border-web-white/70 group-hover:shadow-lg transition-all flex justify-center items-center h-full">
-                {x.coverUrl ? (
-                  <img
-                    alt={`Cover of ${x.title}`}
-                    src={x.coverUrl}
-                    className="object-fill w-full h-full"
-                  />
-                ) : (
-                  <div className="px-6">
-                    <h3 className="text-xl">{x.title}</h3>
-                  </div>
-                )}
-              </div>
+        {!!latest3Articles?.length && (
+          <div className="flex flex-col flex-wrap md:flex-row gap-x-4 gap-y-6 md:gap-x-4 md:gap-y-10 justify-between mt-24">
+            {latest3Articles.map((x) => (
+              <a
+                className="flex flex-col space-y-3 w-full md:max-w-xs xl:max-w-sm 2xl:max-w-md group"
+                href={x.link}
+                target="_blank"
+              >
+                <div className="rounded-xl border overflow-hidden bg-white group-hover:border-web-white/70 group-hover:shadow-lg transition-all flex justify-center items-center h-[200px]">
+                  {x.coverUrl ? (
+                    <img
+                      alt={`Cover of ${x.title}`}
+                      src={x.coverUrl}
+                      className="object-cover w-full"
+                    />
+                  ) : (
+                    <div className="px-6 h-full w-full flex justify-center items-center">
+                      <h3 className="text-xl">{x.title}</h3>
+                    </div>
+                  )}
+                </div>
 
-              <div className="flex justify-between">
-                <div className="inline-flex items-center space-x-1">
-                  <span className="text-xs normal-case text-web-gray/70">
-                    by
-                  </span>{" "}
-                  <p className="text-xs text-primary-blue uppercase">
-                    {x.author}
+                <div className="flex justify-between">
+                  <div className="inline-flex items-center space-x-1">
+                    {x.author ? (
+                      <>
+                        <span className="text-xs normal-case text-web-gray/70">
+                          by
+                        </span>{" "}
+                        <p className="text-xs text-primary-blue uppercase">
+                          {x.author}
+                        </p>
+                      </>
+                    ) : x.type ? (
+                      x.type.map((x) => (
+                        <div
+                          className="text-xs uppercase mr-2"
+                          style={{ color: x.color }}
+                        >
+                          {x.name}
+                        </div>
+                      ))
+                    ) : null}
+                  </div>
+
+                  <p className="text-xs text-gray-600/70 font-light">
+                    {formatDate(x.date)}
                   </p>
                 </div>
 
-                <p className="text-xs text-gray-600/70 font-light">
-                  {formatDate(x.date)}
-                </p>
-              </div>
-
-              <h2 className="text-2xl ">{x.title}</h2>
-            </a>
-          ))}
-        </div>
+                <h2 className="text-2xl">{x.title}</h2>
+              </a>
+            ))}
+          </div>
+        )}
 
         <div className="flex justify-center mt-16">
           <a
-            href="https://mirror.xyz/antalpha-labs.eth"
+            href={siteConfig.notions.latestNews}
             className="border-2 border-web-black py-4 px-12 w-full md:max-w-fit text-center hover:bg-white hover:border-transparent hover:text-web-black uppercase font-semibold text-xs transition-colors"
             target="_blank"
           >

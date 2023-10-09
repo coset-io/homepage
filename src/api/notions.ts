@@ -12,7 +12,7 @@ export default async function handler(
   const notion = new Client({
     auth: process.env.NOTION_TOKEN,
   })
-  const databaseId = process.env.NOTION_DB_ID || "f25a0ef665eb4defb144a726e01de640"
+  const databaseId = process.env.NOTION_DB_ID!
   const response = await notion.databases.query({
     database_id: databaseId,
     sorts: [{ timestamp: "created_time", direction: "descending" }],

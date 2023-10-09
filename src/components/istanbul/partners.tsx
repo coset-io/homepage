@@ -100,7 +100,6 @@ const partnersData = [
     ),
     tag: "Co-Host",
   },
-
   {
     title: "mirana",
     link: "https://mirana.xyz/",
@@ -142,14 +141,12 @@ const partnersData = [
     ),
     tag: "Partner",
   },
-
   {
     title: "secbit",
     link: "https://secbit.io/",
     icon: "/images/logo/secbit.png",
     tag: "Tech Support",
   },
-
   {
     title: "ingonyama",
     link: "https://www.ingonyama.com/",
@@ -192,7 +189,7 @@ export const Partners = (props: React.ComponentProps<"div">) => {
         </div>
       </div>
 
-      <div className="py-8 grid grid-cols-2 gap-2">
+      <div className="py-8 grid grid-cols-1 md:grid-cols-2 gap-2">
         {partnersData.map((x) => (
           <div key={x.title ?? x.link} className="flex flex-col h-full">
             <a
