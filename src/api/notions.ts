@@ -1,12 +1,13 @@
 import { Client } from "@notionhq/client"
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
+import dotenv from 'dotenv'
 
-interface ContactBody {
-  message: string
-}
+dotenv.config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 export default async function handler(
-  req: GatsbyFunctionRequest<ContactBody>,
+  _: GatsbyFunctionRequest,
   res: GatsbyFunctionResponse,
 ) {
   const notion = new Client({
