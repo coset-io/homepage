@@ -14,13 +14,13 @@ const formatDate = (givenDate: string | Date) => {
 
 const DATA = [
   {
-    link: "https://www.youtube.com/watch?v=GYWkRIZeANE",
+    link: "https://www.youtube.com/watch?v=QSkiYP7LvRI",
     coverUrl:
-      "https://i.ytimg.com/vi/GYWkRIZeANE/hqdefault.jpg",
-    title: "What is ZKML and how can Devs get involved",
+      "https://i.ytimg.com/vi/QSkiYP7LvRI/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLC_Ap_FT-ecpCRcAyzJHavJN43GEw",
+    title: "ep5 Ingonyama | Making ZKP computation more seamless and democratized",
     language: "english",
-    views: 589,
-    date: "August 17th, 2023",
+    views: 20,
+    date: "October 23rd, 2023",
   },
   {
     link: "https://www.youtube.com/watch?v=l19roUItyUE",
