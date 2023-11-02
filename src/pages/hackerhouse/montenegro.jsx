@@ -48,7 +48,7 @@ export default function montenegro() {
       <Navi></Navi>
 
       {/* 报名页面 */}
-      <ul className="montenegro montenegro-list">
+      <ul className="montenegro montenegro-list mx-auto">
         <li>
           {" "}
           {/* 第一个页面 */}
