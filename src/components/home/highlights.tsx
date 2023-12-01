@@ -14,13 +14,14 @@ const formatDate = (givenDate: string | Date) => {
 
 const DATA = [
   {
-    link: "https://www.youtube.com/watch?v=QSkiYP7LvRI",
+    link: "https://www.youtube.com/watch?v=txncMQN_pNA",
     coverUrl:
-      "https://i.ytimg.com/vi/QSkiYP7LvRI/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLC_Ap_FT-ecpCRcAyzJHavJN43GEw",
-    title: "ep5 Ingonyama | Making ZKP computation more seamless and democratized",
+      "https://i.ytimg.com/vi/txncMQN_pNA/hqdefault.jpg",
+    title:
+      "ZK in 2023 By Zac Williamson",
     language: "english",
-    views: 20,
-    date: "October 23rd, 2023",
+    views: 125,
+    date: "November 1st, 2023",
   },
   {
     link: "https://www.youtube.com/watch?v=l19roUItyUE",
@@ -32,14 +33,13 @@ const DATA = [
     date: "August 15th, 2023",
   },
   {
-    link: "https://www.youtube.com/watch?v=M97nxh_frG8",
+    link: "https://www.youtube.com/watch?v=QSkiYP7LvRI",
     coverUrl:
-      "https://i.ytimg.com/vi/M97nxh_frG8/hqdefault.jpg",
-    title:
-      "Account Abstraction using alternative mempool ERC-4337 By Candide Wallet [EN]",
+      "https://i.ytimg.com/vi/QSkiYP7LvRI/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLC_Ap_FT-ecpCRcAyzJHavJN43GEw",
+    title: "ep5 Ingonyama | Making ZKP computation more seamless and democratized",
     language: "english",
-    views: 240,
-    date: "August 17th, 2023",
+    views: 20,
+    date: "October 23rd, 2023",
   },
 ]
 
