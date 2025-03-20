@@ -23,6 +23,7 @@
     "@notionhq/client": "^2.2.11",
     "axios": "^1.7.9",
     "clsx": "^1.2.1",
+    "contentful": "^11.5.5",
     "dayjs": "^1.11.8",
     "framer-motion": "^10.12.16",
     "gatsby": "^5.10.0",

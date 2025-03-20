@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import CustomParseFormat from "dayjs/plugin/customParseFormat";
+import AdvancedFormat from "dayjs/plugin/advancedFormat";
 import clsx from "clsx";
 import { Link } from "gatsby";
 import Balancer from "react-wrap-balancer";
 
+import { contentfulClient, EventSkeleton } from "../lib/contentful";
 import Header from "../components/site-header";
 import Footer from "../components/footer";
 import { TailwindIndicator } from "../components/tailwind-indicator";
@@ -23,6 +25,7 @@ import LasVegasPoster from "../components/lasvegas/images/poster.png";
 import ChengduPoster from "../components/chengdu/images/poster.jpg";
 import NewChiangmaiPoster from "../components/new-chiangmai/images/poster.png";
 import SuiHangzhouPoster from "../components/sui-hangzhou/images/poster.png";
+import { Asset } from "contentful";
 
 type House = {
   link: string;
@@ -185,7 +188,36 @@ const FILTERS: Filter[] = ["ALL", "UPCOMING", "ONGOING", "PAST"];
 
 export default function HackerHouse() {
   const [currentFilter, setCurrentFilter] = useState<Filter>("ALL");
-  const filteredList = HOUSES.filter(
+  const [houses, setHouses] = useState(HOUSES);
+  useEffect(() => {
+    (async () => {
+      const events = await contentfulClient
+        .getEntries<EventSkeleton>({ content_type: "events" })
+        .then((response) =>
+          response.items.map(
+            (x) =>
+              ({
+                name: x.fields.name,
+                startDate: formatDate(x.fields.startDate),
+                endDate: formatDate(x.fields.endDate),
+                link: `/hackerhouse/${x.fields.slug}`,
+                location: x.fields.location,
+                theme: x.fields.theme,
+                coverUrl: (x.fields.cover as Asset).fields?.file?.url,
+              } as House)
+          )
+        )
+        .catch(console.error);
+
+      if (!events) {
+        return;
+      }
+
+      setHouses((xs) => [...events, ...xs]);
+    })();
+  }, []);
+
+  const filteredList = houses.filter(
     (x) =>
       currentFilter === "ALL" ||
       getTimeBeing(x.startDate, x.endDate) === currentFilter
@@ -265,6 +297,7 @@ export default function HackerHouse() {
                 currentFilter === x ? "text-primary-black" : "text-gray-500"
               )}
               onClick={() => setCurrentFilter(x)}
+              key={x}
             >
               <span className="relative z-10">{x.toLowerCase()}</span>
 
@@ -294,13 +327,16 @@ export default function HackerHouse() {
           {!!filteredList.length && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               {filteredList.map((x) => {
+                console.log("🚀 ~ {filteredList.map ~ x:", x);
                 const being = getTimeBeing(x.startDate, x.endDate);
+                console.log("🚀 ~ {filteredList.map ~ being:", being);
                 const isExternal = x.link.startsWith("http");
                 const LinkNode = isExternal ? "a" : Link;
 
                 return (
                   <LinkNode
                     className="flex flex-col space-y-3 w-full md:max-w-xs xl:max-w-sm 2xl:max-w-md group"
+                    key={`hackerhouse ${x.link} ${x.endDate}`}
                     to={x.link}
                     href={x.link}
                     target={isExternal ? "_blank" : undefined}
@@ -320,19 +356,15 @@ export default function HackerHouse() {
                     </div>
                     <div className="flex justify-between">
                       <div className="inline-flex items-center space-x-1">
-                        {x.location ? (
-                          <>
-                            <p
-                              className={clsx("text-xs uppercase", {
-                                "text-primary-blue": being === "PAST",
-                                "text-pink-500": being === "UPCOMING",
-                                "text-green-400": being === "ONGOING",
-                              })}
-                            >
-                              {being}
-                            </p>
-                          </>
-                        ) : null}
+                        <p
+                          className={clsx("text-xs uppercase", {
+                            "text-primary-blue": being === "PAST",
+                            "text-pink-500": being === "UPCOMING",
+                            "text-green-400": being === "ONGOING",
+                          })}
+                        >
+                          {being}
+                        </p>
                       </div>
                       <p className="text-xs text-gray-600/70 font-light">
                         {x.startDate}{" "}
@@ -367,6 +399,13 @@ export default function HackerHouse() {
 }
 
 dayjs.extend(CustomParseFormat);
+dayjs.extend(AdvancedFormat);
+
+function formatDate(givenDate: Date | string) {
+  // 2025-03-19
+  const day = dayjs(givenDate, "YYYY-MM-DD");
+  return day.format("Do MMM, YYYY");
+}
 
 function getDay(givenDate: string) {
   const day = dayjs(givenDate, "Do MMM, YYYY");
