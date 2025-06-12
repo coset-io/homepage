@@ -3,17 +3,7 @@ import Header from "../../components/site-header"
 import Footer from "../../components/footer"
 import { TailwindIndicator } from "../../components/tailwind-indicator"
 import { Link } from "gatsby-link"
-
-const FEATURED_COURSES = [
-  {
-    id: 'zkvm',
-    title: "zkVM 系列课程",
-    date: "May 21, 2025",
-    description: "zkVM 作为一种结合零知识证明（Zero-Knowledge Proof, ZKP）和虚拟机（Virtual Machine, VM）的新型技术，背后承载了多个领域的努力，包括密码学、区块链、分布式系统和计算理论，才走到如今，被普遍认为是突破区块链和分布式系统技术瓶颈的「潜力股」。",
-    category: "Zero Knowledge Proof",
-    image: "/images/courses/zkp.jpg"
-  },
-]
+import { featuredCourses } from "../../config/course"
 
 export default function Courses() {
   return(
@@ -92,7 +82,7 @@ export default function Courses() {
             <h2 className="text-2xl font-bold">ZKP</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {FEATURED_COURSES.map((course) => (
+            {featuredCourses.map((course) => (
               <Link to={`/courses/${course.id}`} key={course.id} className="bg-white rounded-lg overflow-hidden shadow-md group hover:shadow-lg cursor-pointer hover:border-web-white/70 transition-all">
                 <div className="h-48 bg-gray-200 relative">
                   <img src={course.image} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-all" />

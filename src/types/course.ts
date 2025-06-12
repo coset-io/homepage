@@ -15,17 +15,29 @@ export interface Sponsor {
   alt: string;
 }
 
+export interface Episode {
+  title: string;
+  speaker: string;
+  videoLink: string;
+  slideLink?: string;
+  resources: Resource[];
+}
+
+export interface Part {
+  title: string;
+  episodes: Episode[];
+  assignments?: Assignment[];
+  supplementaryResources?: Resource[];
+}
+
 export interface CourseData {
   title: string;
-  episodes: string[];
-  speakers: string[];
-  videoLinks: string[];
-  slideLinks: (string | null)[];
-  resourceLinks: Resource[][];
-  assignments: Assignment[];
-  sponsors: Sponsor[];
+  description: string;
   githubBaseUrl: string;
   discussionUrl: string;
+  parts: Part[];
+  sponsors?: Sponsor[];
+  generalSupplementaryResources?: Resource[];
 }
 
 export interface CourseProps {

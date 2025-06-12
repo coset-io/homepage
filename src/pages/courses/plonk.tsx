@@ -2,14 +2,14 @@ import React from "react"
 import Course from "../../components/Course"
 import { coursesNavigationItems } from "../../config/navigation"
 import { coursesFooterConfig } from "../../config/footer"
-import { zkmCourseData } from "../../data/zkm-course"
+import { plonkCourseData } from "../../data/plonk-course"
 
-export default function CourseZkm() {
+export default function CoursePlonk() {
   return (
     <Course 
-      courseData={zkmCourseData}
+      courseData={plonkCourseData}
       navigationItems={coursesNavigationItems}
       footerConfig={coursesFooterConfig}
     />
   )
-} 
+}
